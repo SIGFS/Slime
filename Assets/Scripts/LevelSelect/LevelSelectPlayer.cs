@@ -21,7 +21,7 @@ public class LevelSelectPlayer : MonoBehaviour
     MapPoint prevPoint, currentPoint;
 
     //References
-    Animator anim;
+        //Add Animator
 
     SpriteRenderer spriteRenderer;
 
@@ -42,7 +42,7 @@ public class LevelSelectPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponentInChildren<Animator>();
+        //Add animator
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         spriteRenderer.enabled = false;
         canMove = false;
@@ -63,8 +63,7 @@ public class LevelSelectPlayer : MonoBehaviour
             }
             else
             {
-                if (!animationSet)
-                    SetAnimation();
+                //Set Animation
             }
         }
     }
@@ -155,8 +154,8 @@ public class LevelSelectPlayer : MonoBehaviour
                 SetAnimation();
             }
 
-            if (currentPoint.autoWarp && !currentPoint.isLocked)
-                StartCoroutine(TeleportPlayer(teleportTime));
+            //if Auto warp
+                //Teleport Player
         }
 
         if(currentPoint.isCorner && currentPoint.isWarpPoint)
@@ -168,6 +167,7 @@ public class LevelSelectPlayer : MonoBehaviour
             }
 
             CheckInput();
+            //Select Level
         }
 
         if (currentPoint.isCorner)
@@ -183,27 +183,17 @@ public class LevelSelectPlayer : MonoBehaviour
             }
 
             CheckInput();
-
+            //Select Level
         }
 
     }
 
     void SetAnimation()
     {
-        animationSet = true;
-
-        switch (animating)
-        {
-            case 0:
-                anim.Play("Idle");
-                break;
-            case 1:
-                anim.Play("Walk");
-                break;
-            case 2:
-                anim.Play("WalkLeft");
-                break;
-        }
+        //Set Animation State using Index
+            //Animating == 0 -> Idle
+            //Animating == 1 -> Walk
+            //Animating == 2 -> Walk Left
     }
 
     void SetNextPoint(MapPoint nextPoint)
@@ -217,6 +207,8 @@ public class LevelSelectPlayer : MonoBehaviour
 
     void SetPlayerPos()
     {
+        //Check Save Data for current level
+        //If player hasn't beaten the first level on launch
         transform.position = startPoint.transform.position;
 
         spriteRenderer.enabled = true;
@@ -224,6 +216,10 @@ public class LevelSelectPlayer : MonoBehaviour
         prevPoint = currentPoint;
 
         canMove = true;
+
+        //Else
+            //Sort through all map points to find current level
+            //Set player position to that level
     }
 
     public void GetMovement()
@@ -234,35 +230,25 @@ public class LevelSelectPlayer : MonoBehaviour
         y = movement.y;
     }
 
-    IEnumerator TeleportPlayer(float time)
-    {
-        currentPoint.hasWarped = true;
-        canMove = false;
+    //Select Level Method
+        //If click
+            //if level
+                //play start level sound
+                //Set save data
+                //Load level
+            //if warp
+                //teleport player
 
-        for(float t = 0.0f; t < 1.0f; t+= Time.deltaTime / time)
-        {
-            Color newColor = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, Mathf.Lerp(1, 0, t));
-            spriteRenderer.color = newColor;
-            yield return null;
-        }
+    //Teleport Player Method
+        //update variables
+        //for time
+            //Set player opacity to nothing
+        //move player
+        //wait for time
+        //for time
+            //Set player opacity back
+        //update variables
 
-        transform.position = currentPoint.warpPoint.transform.position;
-
-        yield return new WaitForSeconds(time);
-
-        for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / time)
-        {
-            Color newColor = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, Mathf.Lerp(0, 1, t));
-            spriteRenderer.color = newColor;
-            yield return null;
-        }
-
-        currentPoint = currentPoint.warpPoint;
-
-        currentPoint.hasWarped = true;
-
-        canMove = true;
-    }
 
     #endregion
 

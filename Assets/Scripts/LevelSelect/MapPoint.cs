@@ -7,31 +7,38 @@ using UnityEngine.UI;
 public class MapPoint : MonoBehaviour
 {
     #region Variables
+
+    //Waypoints
     [Header("Waypoints")]
     public MapPoint up;
     public MapPoint right, down, left;
 
+    //Scene Options
     [Header("Scene Options")]
     [SerializeField] int levelIndex = 0;
     [HideInInspector] public string sceneToLoad;
     [TextArea(1, 2)]
     public string levelName;
 
+    //Map Point Options
     [Header("Map Point Options")]
     [HideInInspector] public bool isLocked;
     public bool isLevel;
     public bool isCorner;
     public bool isWarpPoint;
 
+    //Warp Options
     [Header("Warp Options")]
     public bool autoWarp;
     [HideInInspector] public bool hasWarped;
     public MapPoint warpPoint;
 
+    //Image Options
     [Header("Image Options")]
     [SerializeField] Sprite unlockedSprite = null;
     [SerializeField] Sprite lockedSprite = null;
 
+    //Level UI Objects
     [Header("Level UI Objects")]
     [SerializeField] TextMeshProUGUI levelText = null;
     [SerializeField] GameObject levelPanel = null;
@@ -61,7 +68,7 @@ public class MapPoint : MonoBehaviour
         {
             if (isLevel)
             {
-
+                //Data Management
             }
 
             if (isLocked)
