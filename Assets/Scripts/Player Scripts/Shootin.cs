@@ -1,21 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Shootin : MonoBehaviour
 {
-    public Rigidbody2D proj;
+    public Vector2 dir;
+    private float Force = 700;
 
-    public float forceMulti;
-    public Vector2 angle;
-
-    private bool charging = false;
-    private float ChargeTime;
-    public Image ChargeFill;
-
-    public TextMeshProUGUI ChargeText;
+    public GameObject slimeBullet;
 
     // Start is called before the first frame update
     void Start()
@@ -23,37 +18,36 @@ public class Shootin : MonoBehaviour
         
     }
 
-    public void FireForce(float force, Vector2 angle)
-    {
-        proj.AddForce(angle * force);
-
-    }
-
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            charging = true;
-            ChargeTime = 0;
-        }
-        else if(Input.GetKeyUp(KeyCode.Space))
-        {
-            charging = false;
-            FireForce(ChargeTime * forceMulti, angle);
-        }
+        //direction calculation
+        Vector2 CurPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 SlimePos = transform.position;
 
+        dir = CurPos - SlimePos;
 
-        if(charging == true)
+        PointAtCursor();
+
+        //firing
+        if (Input.GetMouseButtonDown(0))
         {
-            ChargeTime += Time.deltaTime;
-
+            Shoot();
         }
-
-        if(ChargeText)
-        {
-            ChargeText.text = ChargeTime.ToString();
-            ChargeFill.fillAmount = (float)ChargeTime / 10;
-        }
+                
     }
+
+    //rotating to aim at the mouse
+    void PointAtCursor()
+    {
+        transform.right = dir;
+    }
+
+    void Shoot()
+    {
+        GameObject BallIns = Instantiate(slimeBullet, transform.position, Quaternion.identity);
+
+        BallIns.GetComponent<Rigidbody2D>().AddForce(transform.right * Force);       
+    }
+
 }
