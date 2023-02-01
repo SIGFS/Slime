@@ -34,8 +34,12 @@ public class SlimeBallScript : MonoBehaviour
     {
         Vector2 dir = rgb.velocity;
 
+
+
         float angle = Mathf.Atan2(dir.x, dir.y) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -45,7 +49,9 @@ public class SlimeBallScript : MonoBehaviour
         {
             hit = true;
             rgb.velocity = new Vector2(0, 0);
-            //rgb.isKinematic = true;
+            rgb.isKinematic = true;
+
+            Debug.Log(transform.position);
         }
         
     }
