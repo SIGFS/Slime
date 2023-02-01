@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class SizeScript : MonoBehaviour
 {
-    [SerializeField] private float size = 3f;
+    [SerializeField] private float size;
     [SerializeField] private GameObject player;
     [SerializeField] private PlayerMovement move;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        size = 3f;
     }
 
     // Update is called once per frame
@@ -19,17 +19,19 @@ public class SizeScript : MonoBehaviour
     {
         //temp size increase / decrease using keypress
         //change to different method in future
-        if(Input.GetKeyDown(KeyCode.Equals) && size < 2.99) {
-            size += 0.3f;
+        if(Input.GetKeyDown(KeyCode.Equals) && size < 9.99) {
+            size += 1f;
             transform.position += new Vector3(0f, 0.15f, 0f);
-            transform.localScale = new Vector3(size, size, 0f);
-            move.maxSpeed -= 0.6f;
+            transform.localScale = new Vector3(size/3, size/3, 0f);
+            move.speed -= 0.35f;
+            move.jumpHeight -= 0.35f;
         }
-        if(Input.GetKeyDown(KeyCode.Minus) && size > 0.31) {
-            size -= 0.3f;
+        if(Input.GetKeyDown(KeyCode.Minus) && size > 1.1) {
+            size -= 1f;
             transform.position -= new Vector3(0f, 0.15f, 0f);
-            transform.localScale = new Vector3(size, size, size);
-            move.maxSpeed += 0.6f;
+            transform.localScale = new Vector3(size/3, size/3, 0f);
+            move.speed += 0.35f;
+            move.jumpHeight += 0.35f;
         }
     }
 }

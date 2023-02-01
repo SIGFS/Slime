@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] public float maxSpeed = 5.0f;
-    [SerializeField] private float jumpHeight = 6.5f;
+    [SerializeField] public float speed = 5.0f;
+    [SerializeField] public float jumpHeight = 6.5f;
 
     private bool facingRight;
     private float moveDirection = 0;
@@ -82,6 +82,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Apply movement velocity
-        playerRigidBody.velocity = new Vector2((moveDirection) * maxSpeed, playerRigidBody.velocity.y);
+        playerRigidBody.velocity = new Vector2((moveDirection) * speed, playerRigidBody.velocity.y);
     }
 }
