@@ -5,12 +5,12 @@ using UnityEngine;
 public class SizeScript : MonoBehaviour
 {
     [SerializeField] private float size = 1f;
-    private GameObject player;
+    [SerializeField] private GameObject player;
+    [SerializeField] private PlayerMovement move;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindWithTag("Player");
         
     }
 
@@ -23,13 +23,13 @@ public class SizeScript : MonoBehaviour
             size += 0.1f;
             transform.position += new Vector3(0f, 0.05f, 0f);
             transform.localScale = new Vector3(size, size, size);
-            player.GetComponent<PlayerMovement>().maxSpeed -= 0.2f;
+            move.maxSpeed -= 0.2f;
         }
         if(Input.GetKeyDown(KeyCode.Minus)) {
             size -= 0.1f;
             transform.position -= new Vector3(0f, 0.05f, 0f);
             transform.localScale = new Vector3(size, size, size);
-            player.GetComponent<PlayerMovement>().maxSpeed += 0.2f;
+            move.maxSpeed += 0.2f;
         }
     }
 }
