@@ -6,6 +6,7 @@ TagManager:
   tags:
   - SlimeBall
   - Ground
+  - Enemy
   layers:
   - Default
   - TransparentFX
