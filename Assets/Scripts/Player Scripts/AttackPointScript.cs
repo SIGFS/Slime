@@ -11,7 +11,6 @@ public class AttackPointScript : MonoBehaviour
 
     public GameObject slimeBullet;
     public SpringJoint2D spj;
-    public Rigidbody2D myBody;
 
     private Transform centerPos;
 
@@ -21,7 +20,6 @@ public class AttackPointScript : MonoBehaviour
     void Start()
     {
         spj = GetComponent<SpringJoint2D>();
-        myBody = GetComponent<Rigidbody2D>();
         centerPos = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
@@ -31,8 +29,7 @@ public class AttackPointScript : MonoBehaviour
         //direction calculation
         Vector2 CurPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 SlimePos = transform.position;
-        Vector2 dir;
-        dir = CurPos - SlimePos;
+        Vector2 dir = CurPos - SlimePos;
 
         PointAtCursor(dir);
         if (Vector3.Distance(transform.position, centerPos.position) > distance)
