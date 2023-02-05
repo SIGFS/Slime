@@ -6,7 +6,7 @@ public class SizeScript : MonoBehaviour
 {
     [SerializeField] private float size;
     [SerializeField] private GameObject player;
-    [SerializeField] private PlayerMovement move;
+    [SerializeField] private PlayerMovementTest move;
 
     // Start is called before the first frame update
     void Start()
