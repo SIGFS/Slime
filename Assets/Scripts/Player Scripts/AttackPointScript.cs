@@ -24,7 +24,7 @@ public class AttackPointScript : MonoBehaviour
         {
             instance = this;
         }
-        distance = this.GetComponentInParent<CircleCollider2D>().bounds.extents.x;
+        distance = GetComponentInParent<CircleCollider2D>().bounds.extents.x;
     }
     // Start is called before the first frame update
     void Start()
@@ -64,10 +64,13 @@ public class AttackPointScript : MonoBehaviour
 
     void Shoot(Vector2 dir)
     {
-        GameObject BallIns = Instantiate(slimeBullet, transform.position, Quaternion.identity);
-        BallIns.GetComponent<Rigidbody2D>().velocity = dir * force;
+        if(SizeScript.instance.Size > 1.1)
+        {
+            GameObject BallIns = Instantiate(slimeBullet, transform.position, Quaternion.identity);
+            BallIns.GetComponent<Rigidbody2D>().velocity = dir * force;
 
-        GetComponentInParent<SizeScript>().instance.SizeChangeDown();
+            SizeScript.instance.SizeChangeDown();
+        }
     }
 
 }

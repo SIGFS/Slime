@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class SizeScript : MonoBehaviour
 {
-    [HideInInspector]public SizeScript instance;
+    [HideInInspector]public static SizeScript instance { get; set; }
 
-    private float size;
+    private float _size;
     [SerializeField] private GameObject player;
 
     private void Awake()
@@ -20,7 +20,7 @@ public class SizeScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        size = 5f;
+        _size = 5f;
     }
 
     // Update is called once per frame
@@ -28,25 +28,31 @@ public class SizeScript : MonoBehaviour
     {
         //temp size increase / decrease using keypress
         //change to different method in future
-        if(Input.GetKeyDown(KeyCode.Equals) && size < 9.99) {
+        if(Input.GetKeyDown(KeyCode.Equals) && _size < 9.99) {
             SizeChangeUp();
         }
-        if(Input.GetKeyDown(KeyCode.Minus) && size > 1.1) {
+        if(Input.GetKeyDown(KeyCode.Minus) && _size > 1.1) {
             SizeChangeDown();
         }
     }
 
     public void SizeChangeUp()
     {
-        size += 1f;
+        _size += 1f;
         transform.position += new Vector3(0f, 0.15f, 0f);
-        transform.localScale = new Vector3(size / 3, size / 3, 0f);
+        transform.localScale = new Vector3(_size / 3, _size / 3, 0f);
     }
 
     public void SizeChangeDown()
     {
-        size -= 1f;
+        _size -= 1f;
         transform.position -= new Vector3(0f, 0.15f, 0f);
-        transform.localScale = new Vector3(size / 3, size / 3, 0f);
+        transform.localScale = new Vector3(_size / 3, _size / 3, 0f);
+    }
+
+    public float Size
+    {
+        get { return _size; }
+        set { _size = value; }
     }
 }
