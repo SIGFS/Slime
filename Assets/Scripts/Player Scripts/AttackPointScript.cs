@@ -10,16 +10,14 @@ public class AttackPointScript : MonoBehaviour
     private float force = 2.5f;
 
     public GameObject slimeBullet;
-    public SpringJoint2D spj;
 
     private Transform centerPos;
 
-    public float distance = 0.75f;
+    private float distance = 0.75f;
 
     // Start is called before the first frame update
     void Start()
     {
-        spj = GetComponent<SpringJoint2D>();
         centerPos = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
