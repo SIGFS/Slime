@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlyingEnemyScript : MonoBehaviour
+public class EnemyScript : MonoBehaviour
 {
     public float speed;
 
@@ -11,12 +11,13 @@ public class FlyingEnemyScript : MonoBehaviour
     public Transform rightGate;
 
     private SpriteRenderer enemySprite;
-    private BoxCollider2D enemyBox;
+    private Collider2D enemyBox;
+    private bool isSlimed;
 
     private void Awake()
     {
         enemySprite = enemy.GetComponent<SpriteRenderer>();
-        enemyBox = enemy.GetComponent<BoxCollider2D>();
+        enemyBox = enemy.GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -54,5 +55,18 @@ public class FlyingEnemyScript : MonoBehaviour
             enemy.transform.Translate(Vector3.left * speed * Time.deltaTime);
         }
 
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Transform colPosition = collision.gameObject.GetComponent<Transform>();
+        
+        if(collision.gameObject.tag == "Player")
+        {
+            if (colPosition.position.y > transform.position.y && colPosition.position.x > transform.position.x - 0.8f && colPosition.position.x < transform.position.x + 0.8f)
+            {
+
+            }
+        }
     }
 }
