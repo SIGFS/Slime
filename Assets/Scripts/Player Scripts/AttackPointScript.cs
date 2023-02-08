@@ -7,18 +7,27 @@ using UnityEngine.UI;
 
 public class AttackPointScript : MonoBehaviour
 {
+    public AttackPointScript instance;
+
     private float force = 2.5f;
 
     public GameObject slimeBullet;
 
     private Transform centerPos;
 
-    private float distance = 0.75f;
-
+    [SerializeField] private float distance;
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
         centerPos = GameObject.FindGameObjectWithTag("Player").transform;
+        distance = this.GetComponentInParent<CircleCollider2D>().bounds.extents.x;
     }
 
     // Update is called once per frame
@@ -55,6 +64,11 @@ public class AttackPointScript : MonoBehaviour
         GameObject BallIns = Instantiate(slimeBullet, transform.position, Quaternion.identity);
 
         BallIns.GetComponent<Rigidbody2D>().velocity = dir * force;       
+    }
+    public void ChangeSize()
+    {
+        distance = this.GetComponentInParent<CircleCollider2D>().bounds.extents.x;
+        Debug.Log(distance);
     }
 
 }

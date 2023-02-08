@@ -3366,7 +3366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ae3fc3069d0cb04c83fde963a9b815a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 0
+  size: 3
   player: {fileID: 219248860}
   move: {fileID: 0}
 --- !u!58 &2019316362
