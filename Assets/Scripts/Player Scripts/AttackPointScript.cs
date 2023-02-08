@@ -7,27 +7,29 @@ using UnityEngine.UI;
 
 public class AttackPointScript : MonoBehaviour
 {
-    public AttackPointScript instance;
+    [HideInInspector]public AttackPointScript instance;
 
     private float force = 2.5f;
 
+    [Header("Instantiate")]
     public GameObject slimeBullet;
+    public GameObject centerObject;
 
     private Transform centerPos;
+    private float distance;
 
-    [SerializeField] private float distance;
     private void Awake()
     {
         if(instance == null)
         {
             instance = this;
         }
+        distance = this.GetComponentInParent<CircleCollider2D>().bounds.extents.x;
     }
     // Start is called before the first frame update
     void Start()
     {
-        centerPos = GameObject.FindGameObjectWithTag("Player").transform;
-        distance = this.GetComponentInParent<CircleCollider2D>().bounds.extents.x;
+        centerPos = centerObject.transform;
     }
 
     // Update is called once per frame
@@ -41,6 +43,7 @@ public class AttackPointScript : MonoBehaviour
         PointAtCursor(dir);
         if (Vector3.Distance(transform.position, centerPos.position) > distance)
         {
+            distance = this.GetComponentInParent<CircleCollider2D>().bounds.extents.x * 0.5f;
             Vector3 directon = (transform.position - centerPos.position).normalized * distance;
             transform.position = centerPos.position + directon;
         }
@@ -62,13 +65,9 @@ public class AttackPointScript : MonoBehaviour
     void Shoot(Vector2 dir)
     {
         GameObject BallIns = Instantiate(slimeBullet, transform.position, Quaternion.identity);
+        BallIns.GetComponent<Rigidbody2D>().velocity = dir * force;
 
-        BallIns.GetComponent<Rigidbody2D>().velocity = dir * force;       
-    }
-    public void ChangeSize()
-    {
-        distance = this.GetComponentInParent<CircleCollider2D>().bounds.extents.x;
-        Debug.Log(distance);
+        GetComponentInParent<SizeScript>().instance.SizeChangeDown();
     }
 
 }

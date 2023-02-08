@@ -25,7 +25,7 @@ public class SlimeBallScript : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //stoping on hit
-        if (collision.gameObject.tag == "Ground")
+        if (collision.gameObject.layer == 7) //If hits ground layer
         {
             rgb.velocity = new Vector2(0, 0);
             rgb.isKinematic = true;
