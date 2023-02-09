@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2135336316910014745}
   - component: {fileID: 2135336316910014757}
   - component: {fileID: 2135336316910014756}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BatPlaceHolder
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -153,7 +153,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &2135336317180560687
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,7 +163,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2135336317180560684}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightGate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,7 +194,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2135336317321623955}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftGate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2135336317846631464}
   - component: {fileID: 2135336317846631467}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BatEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
