@@ -216,7 +216,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4471922567143871282, guid: 989f561a720dc1a4a8a19200456087aa, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4471922567143871282, guid: 989f561a720dc1a4a8a19200456087aa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -262,7 +262,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3018714180152433390, guid: 989f561a720dc1a4a8a19200456087aa, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 989f561a720dc1a4a8a19200456087aa, type: 3}
 --- !u!1 &870973374
 GameObject:
@@ -4196,7 +4197,7 @@ Transform:
   m_Children:
   - {fileID: 870973375}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1057256436
 GameObject:
@@ -4365,7 +4366,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -41.735}
 --- !u!61 &1323538006
 BoxCollider2D:
