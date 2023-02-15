@@ -28,6 +28,7 @@ public class EnemyScript : MonoBehaviour
 
     private void Move()
     {
+        //Move back and forth between gates
         if(enemy.transform.position.x <= leftGate.position.x)
         {
             if (!enemySprite.flipX)
@@ -57,16 +58,5 @@ public class EnemyScript : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Transform colPosition = collision.gameObject.GetComponent<Transform>();
-        
-        if(collision.gameObject.tag == "Player")
-        {
-            if (colPosition.position.y > transform.position.y && colPosition.position.x > transform.position.x - 0.8f && colPosition.position.x < transform.position.x + 0.8f)
-            {
-
-            }
-        }
-    }
+    
 }

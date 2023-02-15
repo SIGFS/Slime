@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2135336316910014745}
   - component: {fileID: 2135336316910014757}
   - component: {fileID: 2135336316910014756}
+  - component: {fileID: 4900646304430253163}
   m_Layer: 8
   m_Name: BatPlaceHolder
   m_TagString: Enemy
@@ -154,6 +155,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &4900646304430253163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135336316910014744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ea35c260ae038f41ad9e62f4da109a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2135336317180560687
 GameObject:
   m_ObjectHideFlags: 0
