@@ -95,16 +95,19 @@ public class PlayerMovement : MonoBehaviour
 			OnJumpInput();
 		}
 
+		
 		if (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.C) || Input.GetKeyUp(KeyCode.J))
 		{
 			OnJumpUpInput();
 		}
+		
 		#endregion
 
 		#region COLLISION CHECKS
 		if (!IsJumping)
 		{
 			//Ground Check
+
 			if (Physics2D.OverlapBox(_groundCheckPoint.position, _groundCheckSize, 0, _groundLayer) && !IsJumping) //checks if set box overlaps with ground
 			{
 				LastOnGroundTime = Data.coteTime; //if so sets the lastGrounded to coyoteTime
@@ -126,10 +129,9 @@ public class PlayerMovement : MonoBehaviour
 		#endregion
 
 		#region JUMP CHECKS
-		if (IsJumping && RB.velocity.y < 0)
+		if (IsJumping && RB.velocity.y <= 0)
 		{
 			IsJumping = false;
-
 			if (!IsWallJumping)
 				_isJumpFalling = true;
 		}
@@ -384,7 +386,8 @@ public class PlayerMovement : MonoBehaviour
 
 	private bool CanJump()
 	{
-		return LastOnGroundTime > 0 && !IsJumping;
+		return true;
+		//return LastOnGroundTime > 0 && !IsJumping;
 	}
 
 	private bool CanWallJump()
