@@ -314,6 +314,13 @@ public class PlayerMovement : MonoBehaviour
 		transform.localScale = scale;
 
 		IsFacingRight = !IsFacingRight;
+
+		//Changes flip of firepoint
+		/*
+		Vector3 childScale = FirePoint.transform.localScale;
+		childScale.x *= -1;
+		FirePoint.transform.localScale = childScale;
+		*/
 	}
 	#endregion
 
