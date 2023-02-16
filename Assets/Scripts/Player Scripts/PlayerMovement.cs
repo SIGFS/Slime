@@ -387,6 +387,8 @@ public class PlayerMovement : MonoBehaviour
 	private bool CanJump()
 	{
 		return true;
+		//ISSUE: EITHER LAST ON GROUND TIME OR ISJUMPING IS BROKEN 
+
 		//return LastOnGroundTime > 0 && !IsJumping;
 	}
 
