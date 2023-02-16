@@ -30,19 +30,8 @@ public class SlimeBallScript : MonoBehaviour
             rgb.velocity = new Vector2(0, 0);
             rgb.isKinematic = true;
 
-            //Debug.Log(transform.position);
+
         }
         
     }
-    /*
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        //stoping on hit
-        if (collision.gameObject.tag == "Ground")
-        {
-            hit = true;
-            rgb.velocity = new Vector2(0,0);
-            rgb.isKinematic = true;
-        }
-    }*/
 }

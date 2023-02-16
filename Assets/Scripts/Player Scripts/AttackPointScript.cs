@@ -64,13 +64,10 @@ public class AttackPointScript : MonoBehaviour
 
     void Shoot(Vector2 dir)
     {
-        if(SizeScript.instance.Size > 1.1)
-        {
-            GameObject BallIns = Instantiate(slimeBullet, transform.position, Quaternion.identity);
-            BallIns.GetComponent<Rigidbody2D>().velocity = dir * force;
+        GameObject BallIns = Instantiate(slimeBullet, transform.position, Quaternion.identity);
+        BallIns.GetComponent<Rigidbody2D>().velocity = dir * force;
 
-            SizeScript.instance.SizeChangeDown();
-        }
+        SizeScript.instance.SizeChangeDown();
     }
 
 }
