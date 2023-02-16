@@ -42,3 +42,4 @@ MonoBehaviour:
   slideAccel: 0
   coteTime: 0.1
   jumpInputBufferTime: 0.1
+  size: 3

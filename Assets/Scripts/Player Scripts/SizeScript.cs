@@ -6,8 +6,8 @@ public class SizeScript : MonoBehaviour
 {
     [HideInInspector]public static SizeScript instance { get; set; }
 
-    private float _size;
     [SerializeField] private GameObject player;
+    [SerializeField] private PlayerData Data;
 
     private void Awake()
     {
@@ -20,7 +20,7 @@ public class SizeScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _size = 5f;
+        transform.localScale = new Vector3((float)Data.size * 0.3f, (float)Data.size * 0.3f, 0f);
     }
 
     // Update is called once per frame
@@ -38,27 +38,24 @@ public class SizeScript : MonoBehaviour
 
     public void SizeChangeUp()
     {
-        if(Size < 9.99)
+        if(Data.size < 10)
         {
-            _size += 1f;
-            transform.position += new Vector3(0f, 0.15f, 0f);
-            transform.localScale = new Vector3(_size / 3, _size / 3, 0f);
+            Data.size += 1;
+            //Adjust position up to account for the change in size of object to prevent clipping through objects. Adjustment should be half of the size increase increment.
+            transform.position += new Vector3(0f, 0.15f, 0f); 
+            transform.localScale = new Vector3((float)Data.size * 0.3f, (float)Data.size * 0.3f, 0f);
         }
+
     }
 
     public void SizeChangeDown()
     {
-        if(Size > 1.1)
+        if(Data.size > 1)
         {
-            _size -= 1f;
-            transform.position -= new Vector3(0f, 0.15f, 0f);
-            transform.localScale = new Vector3(_size / 3, _size / 3, 0f);
+            Data.size -= 1;
+            //Adjust position down to put player back on floor. Adjustment should be half of the size decrease increment.
+            transform.position -= new Vector3(0f, -0.15f, 0f); 
+            transform.localScale = new Vector3((float)Data.size * 0.3f, (float)Data.size * 0.3f, 0f);
         }
-    }
-
-    public float Size
-    {
-        get { return _size; }
-        set { _size = value; }
     }
 }
