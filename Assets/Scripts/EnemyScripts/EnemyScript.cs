@@ -12,7 +12,6 @@ public class EnemyScript : MonoBehaviour
 
     private SpriteRenderer enemySprite;
     private Collider2D enemyBox;
-    private bool isSlimed;
 
     private void Awake()
     {
@@ -23,7 +22,8 @@ public class EnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
+        if(enemy != null)
+            Move();
     }
 
     private void Move()

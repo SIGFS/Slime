@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class EnemyCollision : MonoBehaviour
 {
+    public bool isSlimed;
+
+    private Animator enemyAnim;
+
+    public void Awake()
+    {
+        isSlimed = false;
+        enemyAnim = gameObject.GetComponent<Animator>();
+    }
+
     // Start is called before the first frame update
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -19,8 +29,13 @@ public class EnemyCollision : MonoBehaviour
             {
                 if (colBody.velocity.y < 0)
                     force -= colBody.velocity.y;
+                if (isSlimed)
+                    force *= 1.5f;
 
                 colBody.AddForce(Vector2.up * force, ForceMode2D.Impulse);
+
+                if (!isSlimed)
+                    Destroy(gameObject);
             } 
             //if player is not above, thrust backward and reduce size
             else
@@ -30,6 +45,14 @@ public class EnemyCollision : MonoBehaviour
 
                 playerSize.SizeChangeDown();
             }
+        }
+
+        if (collision.gameObject.tag == "SlimeBall")
+        {
+            isSlimed = true;
+            enemyAnim.Play("SlimedMove");
+
+            transform.parent.GetComponent<EnemyScript>().speed /= 2;
         }
     }
 }
