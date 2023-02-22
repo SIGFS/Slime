@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ObstaclesScript : MonoBehaviour
 {
@@ -16,7 +17,8 @@ public class ObstaclesScript : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("AdamScene");
+            //UnityEngine.SceneManagement.SceneManager.LoadScene("AdamScene");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
         }
     }
 }
