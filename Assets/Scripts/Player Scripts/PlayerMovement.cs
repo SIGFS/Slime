@@ -47,6 +47,10 @@ public class PlayerMovement : MonoBehaviour
 	private Vector2 _moveInput;
 	public float LastPressedJumpTime { get; private set; }
 
+	//Size Script Call
+	public SizeScript sizescript;
+
+
 	//Set all of these up in the inspector
 	[Header("Checks")]
 	[SerializeField] private Transform _groundCheckPoint;

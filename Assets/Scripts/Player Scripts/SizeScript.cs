@@ -15,6 +15,8 @@ public class SizeScript : MonoBehaviour
         {
             instance = this;
         }
+        Data.size = 5;
+        dataChange();
     }
 
     // Start is called before the first frame update
@@ -44,6 +46,7 @@ public class SizeScript : MonoBehaviour
             //Adjust position up to account for the change in size of object to prevent clipping through objects. Adjustment should be half of the size increase increment.
             transform.position += new Vector3(0f, 0.15f, 0f); 
             transform.localScale = new Vector3((float)Data.size * 0.3f, (float)Data.size * 0.3f, 0f);
+            dataChange();
         }
 
     }
@@ -56,6 +59,7 @@ public class SizeScript : MonoBehaviour
             //Adjust position down to put player back on floor. Adjustment should be half of the size decrease increment.
             transform.position -= new Vector3(0f, 0.15f, 0f); 
             transform.localScale = new Vector3((float)Data.size * 0.3f, (float)Data.size * 0.3f, 0f);
+            dataChange();
         }
     }
 
@@ -75,5 +79,14 @@ public class SizeScript : MonoBehaviour
     public bool isMinSize() {
         if(Data.size == 1) return true;
         return false;
+    }
+
+    public void dataChange()
+    {
+        //Data.jumpHeight = -.7777777f * getSize() + 7.7777777f;
+        Data.jumpHeight = -.55f * getSize() + 5.5f;
+        Data.jumpTimeToApex = -.05f * getSize() + .55f;
+        Data.runMaxSpeed = -1.1111f * getSize() + 17.111111f;
+        Data.jumpForce = Mathf.Abs(Data.gravityStrength) * (-.05f * getSize() + .55f);
     }
 }
