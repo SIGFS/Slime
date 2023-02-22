@@ -1593,7 +1593,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1614,7 +1614,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1635,7 +1635,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1656,7 +1656,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1731,6 +1731,90 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: ForestPack1_68
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5dc23d2d7ce9a14cb26b007954c1b1b
+      internalID: 19505083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForestPack1_69
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0eafe8c412b0a04197962d846c3a3da
+      internalID: 826314582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForestPack1_70
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aef876cfd330c8428d2f3b7b1aa7acc
+      internalID: -1477939643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForestPack1_71
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15ac82b048f6f524a921ccfd23f8c3aa
+      internalID: -1592891295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1742,7 +1826,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ForestPack1_65: 1895063104
+      ForestPack1_5: 730162846362093848
       ForestPack1_8: -5779984295300255332
       ForestPack1_29: -5269866185983654809
       ForestPack1_59: -7257977178788495025
@@ -1763,6 +1847,7 @@ TextureImporter:
       ForestPack1_11: 5435721491604619655
       ForestPack1_53: -4151373937358926401
       ForestPack1_60: -7184346975770422483
+      ForestPack1_69: 826314582
       ForestPack1_25: -8460779946609094371
       ForestPack1_42: -4748189193343717201
       ForestPack1_23: -4576667653050092455
@@ -1771,6 +1856,7 @@ TextureImporter:
       ForestPack1_7: 4698520659994082667
       ForestPack1_38: 21221034772143297
       ForestPack1_3: -2789127303272146178
+      ForestPack1_70: -1477939643
       ForestPack1_50: 2180675161919648136
       ForestPack1_31: 6885753321201886130
       ForestPack1_66: -2111229100
@@ -1785,6 +1871,7 @@ TextureImporter:
       ForestPack1_41: 7479852324300174466
       ForestPack1_28: 7770851005726988424
       ForestPack1_62: -242824755
+      ForestPack1_71: -1592891295
       ForestPack1_43: -3872747610129316510
       ForestPack1_22: -2499718116492119997
       ForestPack1_40: -1623043640453659113
@@ -1796,6 +1883,7 @@ TextureImporter:
       ForestPack1_44: -2632463622093650824
       ForestPack1_35: 4947514666474945081
       ForestPack1_39: 7657093205203571443
+      ForestPack1_68: 19505083
       ForestPack1_17: 7323349514077594090
       ForestPack1_54: -177201259744477593
       ForestPack1_30: -4182601933010488341
@@ -1809,7 +1897,7 @@ TextureImporter:
       ForestPack1_64: 1476828255
       ForestPack1_18: -2357763010672863217
       ForestPack1_63: 582541435
-      ForestPack1_5: 730162846362093848
+      ForestPack1_65: 1895063104
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -717,7 +717,7 @@ TextureImporter:
       name: TaigaPack1_30
       rect:
         serializedVersion: 2
-        x: 256
+        x: 0
         y: 384
         width: 64
         height: 64
@@ -844,7 +844,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 320
+        y: 384
         width: 64
         height: 64
       alignment: 0
@@ -864,8 +864,8 @@ TextureImporter:
       name: TaigaPack1_37
       rect:
         serializedVersion: 2
-        x: 256
-        y: 320
+        x: 64
+        y: 384
         width: 64
         height: 64
       alignment: 0
@@ -927,8 +927,8 @@ TextureImporter:
       name: TaigaPack1_40
       rect:
         serializedVersion: 2
-        x: 256
-        y: 256
+        x: 128
+        y: 320
         width: 64
         height: 64
       alignment: 0
@@ -1011,8 +1011,8 @@ TextureImporter:
       name: TaigaPack1_44
       rect:
         serializedVersion: 2
-        x: 64
-        y: 192
+        x: 192
+        y: 384
         width: 64
         height: 64
       alignment: 0
@@ -1116,8 +1116,8 @@ TextureImporter:
       name: TaigaPack1_49
       rect:
         serializedVersion: 2
-        x: 64
-        y: 128
+        x: 192
+        y: 320
         width: 64
         height: 64
       alignment: 0
@@ -1532,6 +1532,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: TaigaPack1_68
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 157
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e0d973ff7709124ebcafa65782de8bc
+      internalID: 1684481652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1546,6 +1567,7 @@ TextureImporter:
       TaigaPack1_41: 1430631940
       TaigaPack1_61: 715543236
       TaigaPack1_11: -1415733661
+      TaigaPack1_68: 1684481652
       TaigaPack1_12: -470824379
       TaigaPack1_48: -1539547890
       TaigaPack1_22: 217058421
