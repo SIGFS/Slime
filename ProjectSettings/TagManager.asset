@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Well
   - Spike
+  - AttackPoint
   layers:
   - Default
   - TransparentFX

@@ -17,6 +17,7 @@ public class AttackPointScript : MonoBehaviour
 
     private Transform centerPos;
     private float distance;
+    private GameObject Player;
 
     private void Awake()
     {
@@ -24,7 +25,8 @@ public class AttackPointScript : MonoBehaviour
         {
             instance = this;
         }
-        distance = GetComponentInParent<CircleCollider2D>().bounds.extents.x;
+        Player = GameObject.FindGameObjectWithTag("Player");
+        distance = Player.GetComponent<CircleCollider2D>().bounds.extents.x;
     }
     // Start is called before the first frame update
     void Start()
@@ -43,7 +45,7 @@ public class AttackPointScript : MonoBehaviour
         PointAtCursor(dir);
         if (Vector3.Distance(transform.position, centerPos.position) > distance)
         {
-            distance = this.GetComponentInParent<CircleCollider2D>().bounds.extents.x * 0.5f;
+            distance = Player.GetComponent<CircleCollider2D>().bounds.extents.x * 0.5f;
             Vector3 directon = (transform.position - centerPos.position).normalized * distance;
             transform.position = centerPos.position + directon;
         }
@@ -53,7 +55,6 @@ public class AttackPointScript : MonoBehaviour
         {
             Shoot(dir);
         }
-                
     }
 
     //rotating to aim at the mouse
@@ -69,5 +70,7 @@ public class AttackPointScript : MonoBehaviour
 
         SizeScript.instance.SizeChangeDown();
     }
+
+
 
 }

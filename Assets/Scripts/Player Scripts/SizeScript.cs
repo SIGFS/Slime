@@ -8,6 +8,10 @@ public class SizeScript : MonoBehaviour
 
     [SerializeField] private GameObject player;
     [SerializeField] private PlayerData Data;
+    [SerializeField] private GameObject attackPoint;
+
+    private float wellDelay;
+    private float wellDelayMax = 1f;
 
     private void Awake()
     {
@@ -36,6 +40,7 @@ public class SizeScript : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Minus)) {
             SizeChangeDown();
         }*/
+        wellDelay += Time.deltaTime;
     }
 
     public void SizeChangeUp()
@@ -47,6 +52,10 @@ public class SizeScript : MonoBehaviour
             transform.position += new Vector3(0f, 0.15f, 0f); 
             transform.localScale = new Vector3((float)Data.size * 0.3f, (float)Data.size * 0.3f, 0f);
             dataChange();
+
+            Vector3 scale = transform.localScale;
+            scale.x = Mathf.Abs(scale.x);
+            attackPoint.transform.localScale = (scale / 3);
         }
 
     }
@@ -60,6 +69,10 @@ public class SizeScript : MonoBehaviour
             transform.position -= new Vector3(0f, 0.15f, 0f); 
             transform.localScale = new Vector3((float)Data.size * 0.3f, (float)Data.size * 0.3f, 0f);
             dataChange();
+
+            Vector3 scale = transform.localScale;
+            scale.x = Mathf.Abs(scale.x);
+            attackPoint.transform.localScale = (scale / 3);
         }
     }
 
@@ -99,10 +112,11 @@ public class SizeScript : MonoBehaviour
             SizeChangeDown();
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.tag == "Well")
+        if(collision.tag == "Well" && wellDelay >= wellDelayMax)
         {
+            wellDelay = 0f;
             SizeChangeUp();
         }
     }

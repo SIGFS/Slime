@@ -10,7 +10,7 @@ public class LevelSelectPlayer : MonoBehaviour
 
     //speeds
     [SerializeField] float moveSpeed = 3f;
-    [SerializeField] float teleportTime = 1f;
+    //[SerializeField] float teleportTime = 1f;
 
     //location of sprite
     [SerializeField] Transform playerSprite = null;

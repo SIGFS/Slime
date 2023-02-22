@@ -15,7 +15,7 @@ public class MapPoint : MonoBehaviour
 
     //Scene Options
     [Header("Scene Options")]
-    [SerializeField] int levelIndex = 0;
+    //[SerializeField] int levelIndex = 0;
     [HideInInspector] public string sceneToLoad;
     [TextArea(1, 2)]
     public string levelName;
