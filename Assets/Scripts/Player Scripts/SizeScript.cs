@@ -83,10 +83,27 @@ public class SizeScript : MonoBehaviour
 
     public void dataChange()
     {
+        //formula
+
         //Data.jumpHeight = -.7777777f * getSize() + 7.7777777f;
         Data.jumpHeight = -.55f * getSize() + 5.5f;
         Data.jumpTimeToApex = -.05f * getSize() + .55f;
         Data.runMaxSpeed = -1.1111f * getSize() + 17.111111f;
         Data.jumpForce = Mathf.Abs(Data.gravityStrength) * (-.05f * getSize() + .55f);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Spike")
+        {
+            SizeChangeDown();
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Well")
+        {
+            SizeChangeUp();
+        }
     }
 }

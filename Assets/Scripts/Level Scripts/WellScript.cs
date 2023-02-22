@@ -25,7 +25,6 @@ public class WellScript : MonoBehaviour
         //not at the max size. If so, increases the player's size
         if(collider.tag == "Player" && liquidRemaining > 0 && delay >= delayMax && !collider.gameObject.GetComponent<SizeScript>().isMaxSize()) {
             delay = 0f;
-            collider.gameObject.GetComponent<SizeScript>().SizeChangeUp();
             liquidRemaining--;
             transform.localScale -= new Vector3(0f, 0.34f, 0f);
         }
