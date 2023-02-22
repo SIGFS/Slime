@@ -30,14 +30,17 @@ public class EnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (notGated)
+
+
+        if (enemy != null)
         {
-            checkGround();
-            checkWall();
-        }
-        
-        if(enemy != null)
             Move();
+            if (notGated)
+            {
+                checkGround();
+                checkWall();
+            }
+        }
     }
 
     private void Move()

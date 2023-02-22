@@ -35,13 +35,14 @@ public class EnemyCollision : MonoBehaviour
                 colBody.AddForce(Vector2.up * force, ForceMode2D.Impulse);
 
                 if (!isSlimed)
-                    Destroy(gameObject);
+                    Destroy(gameObject.transform.parent.gameObject);
             } 
             //if player is not above, thrust backward and reduce size
             else
             {
                 Vector3 direction = Vector3.Normalize(colPosition.position - transform.position);
                 colBody.AddForce(direction * force, ForceMode2D.Impulse);
+                playerSize.SizeChangeDown();
             }
         }
 
@@ -50,7 +51,9 @@ public class EnemyCollision : MonoBehaviour
             isSlimed = true;
             enemyAnim.Play("SlimedMove");
 
-            transform.parent.GetComponent<EnemyScript>().speed /= 2;
+            gameObject.tag = "BouncePad";
+
+            GetComponentInParent<EnemyScript>().speed /= 2;
         }
     }
 }

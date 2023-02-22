@@ -74,6 +74,11 @@ public class SizeScript : MonoBehaviour
             scale.x = Mathf.Abs(scale.x);
             attackPoint.transform.localScale = (scale / 3);
         }
+        else if (isMinSize())
+        {
+            //Play slime explode fx
+            this.gameObject.transform.parent.gameObject.SetActive(false);
+        }
     }
 
     public int getSize() {
@@ -107,7 +112,7 @@ public class SizeScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Spike")
+        if (collision.gameObject.tag == "Spike")
         {
             SizeChangeDown();
         }
