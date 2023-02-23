@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SizeScript : MonoBehaviour
 {
@@ -78,6 +79,9 @@ public class SizeScript : MonoBehaviour
         {
             //Play slime explode fx
             this.gameObject.transform.parent.gameObject.SetActive(false);
+
+            // For now, restart the scene. We need to add checkpoints later... 
+            Invoke("RestartCheckpoint", 2f);
         }
     }
 
@@ -124,5 +128,11 @@ public class SizeScript : MonoBehaviour
             wellDelay = 0f;
             SizeChangeUp();
         }
+    }
+
+    // Restart game (Maybe move later?)
+    void RestartCheckpoint()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
     }
 }
