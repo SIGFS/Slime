@@ -566,7 +566,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
@@ -591,7 +591,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
@@ -4329,8 +4329,8 @@ TextureImporter:
       overworld_102: -7045540132257645930
       overworld_10: -9062093603636991699
       overworld_8: -3077691454763529442
-      overworld_38: -7541094296270104148
       overworld_33: -3607323694121600593
+      overworld_38: -7541094296270104148
       overworld_68: 5747222119647185576
       overworld_42: -355992245417735950
       overworld_83: -384535914044181606
@@ -4384,9 +4384,9 @@ TextureImporter:
       overworld_109: -6506994511312718368
       overworld_87: 2950422818151232479
       overworld_4: 1508907952123479184
-      overworld_93: -4516092756825868871
       overworld_101: -8419206293522781826
       overworld_125: -1973295166377821756
+      overworld_93: -4516092756825868871
       overworld_97: -719231100313714259
       overworld_13: -5575194074474450752
       overworld_139: -5668413096608118541
@@ -4406,8 +4406,8 @@ TextureImporter:
       overworld_88: 5935574277578599217
       overworld_99: 3849373827619804278
       overworld_9: 5445513934105861695
-      overworld_24: 4141115616514778644
       overworld_80: 24683289441216350
+      overworld_24: 4141115616514778644
       overworld_66: -2711237898731307368
       overworld_63: -7045541367700190169
       overworld_59: 7818350393237016572
