@@ -120,6 +120,10 @@ public class SizeScript : MonoBehaviour
         {
             SizeChangeDown();
         }
+        if(collision.gameObject.tag == "DeathZone")
+        {
+            RestartCheckpoint();
+        }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -130,7 +134,15 @@ public class SizeScript : MonoBehaviour
         }
     }
 
-    // Restart game (Maybe move later?)
+
+
+    /* Restart Game (Remove Later) 
+
+    Eventually
+
+    Utilize methods in other scripts that load the scene and pass an initial value to player size when the scene is loaded
+     
+     */
     void RestartCheckpoint()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
