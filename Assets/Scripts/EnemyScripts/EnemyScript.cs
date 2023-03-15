@@ -18,8 +18,8 @@ public class EnemyScript : MonoBehaviour
 
     private SpriteRenderer enemySprite;
     private Collider2D enemyBox;
-    public bool hitWall;
-    public bool hitEdge;
+    private bool hitWall;
+    private bool hitEdge;
 
     private void Awake()
     {

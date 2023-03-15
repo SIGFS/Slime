@@ -49,7 +49,7 @@ public class EnemyCollision : MonoBehaviour
         if (collision.gameObject.tag == "SlimeBall")
         {
             isSlimed = true;
-            enemyAnim.Play("SlimedMove");
+            enemyAnim.SetTrigger("Slimed");
 
             gameObject.tag = "BouncePad";
 
