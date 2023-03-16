@@ -50,13 +50,17 @@ SpriteAtlas:
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
-  - {fileID: -1922212443, guid: 09c408408ba99b74ea32ad44ff4e201d, type: 3}
-  - {fileID: 839933501, guid: 09c408408ba99b74ea32ad44ff4e201d, type: 3}
+  - {fileID: -1124756271, guid: 09c408408ba99b74ea32ad44ff4e201d, type: 3}
+  - {fileID: -1586403820, guid: 09c408408ba99b74ea32ad44ff4e201d, type: 3}
+  - {fileID: 502889042, guid: 09c408408ba99b74ea32ad44ff4e201d, type: 3}
+  - {fileID: 1462312243, guid: 09c408408ba99b74ea32ad44ff4e201d, type: 3}
   - {fileID: 21300000, guid: 784cc3a017c62f84a961900265f46f2d, type: 3}
-  - {fileID: 140398286, guid: 313fdd44d93fee04396e131c6d2eaa53, type: 3}
-  - {fileID: -1314730825, guid: 313fdd44d93fee04396e131c6d2eaa53, type: 3}
   - {fileID: 21300000, guid: 791809157c6663b48955225da646eeab, type: 3}
   - {fileID: 21300000, guid: 8ea8d4353812e87478dea16c7174eb5f, type: 3}
+  - {fileID: -350299417, guid: 10b808f52c6f3884fa1144944f7174cb, type: 3}
+  - {fileID: 1499042269, guid: 10b808f52c6f3884fa1144944f7174cb, type: 3}
+  - {fileID: -611329263, guid: 10b808f52c6f3884fa1144944f7174cb, type: 3}
+  - {fileID: -230416022, guid: 10b808f52c6f3884fa1144944f7174cb, type: 3}
   - {fileID: 878267626, guid: 40f9182777654fd4d9eaeb0f4c58b4d5, type: 3}
   - {fileID: -817216726, guid: 40f9182777654fd4d9eaeb0f4c58b4d5, type: 3}
   - {fileID: 1032206835, guid: 90c6be383b464fd45b709f68c58157e4, type: 3}
@@ -102,13 +106,17 @@ SpriteAtlas:
   - {fileID: 1810521962, guid: d48253ffda0b7a54997a82d835980c53, type: 3}
   - {fileID: 1030507676, guid: d48253ffda0b7a54997a82d835980c53, type: 3}
   m_PackedSpriteNamesToIndex:
+  - Bat2_3
+  - Bat2_2
   - Bat2_1
   - Bat2_0
   - Baija_jump-1.png
-  - Bat2Slime_1
-  - Bat2Slime_0
   - Baija_Floor-2.png
   - OceanExtention
+  - Bat2Slime_3
+  - Bat2Slime_2
+  - Bat2Slime_1
+  - Bat2Slime_0
   - enemy slime_0
   - enemy slime_1
   - BatPlaceHolder_0

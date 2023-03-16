@@ -108,19 +108,19 @@ TextureImporter:
       name: Bat2_0
       rect:
         serializedVersion: 2
-        x: 10
+        x: 5
         y: 5
         width: 135
         height: 155
       alignment: 9
-      pivot: {x: 0.1286673, y: 0.17855328}
+      pivot: {x: 0.12, y: 0.17258078}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9bcee6b1c6fc7e0499b4f14d1cd5ea63
-      internalID: 839933501
+      spriteID: 71625b9af76ce3a49bd7d33eaea28ebf
+      internalID: 1462312243
       vertices: []
       indices: 
       edges: []
@@ -129,19 +129,61 @@ TextureImporter:
       name: Bat2_1
       rect:
         serializedVersion: 2
-        x: 170
-        y: 0
-        width: 130
-        height: 155
+        x: 165
+        y: 45
+        width: 145
+        height: 65
       alignment: 9
-      pivot: {x: 0.14024964, y: 0.6518491}
+      pivot: {x: 0.12, y: 0.34008342}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17516b0871dfb7440ba62486fcf072dc
-      internalID: -1922212443
+      spriteID: dcc1dbfd38028a24a833f517a93f635e
+      internalID: 502889042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat2_2
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 0
+        width: 130
+        height: 155
+      alignment: 9
+      pivot: {x: 0.12, y: 0.69329566}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 322c6fc38cfa2af42988a48e983514a3
+      internalID: -1586403820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat2_3
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 45
+        width: 145
+        height: 65
+      alignment: 9
+      pivot: {x: 0.12, y: 0.34949023}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13a737b31732587489248e8d56117486
+      internalID: -1124756271
       vertices: []
       indices: 
       edges: []
@@ -157,8 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Bat2_0: 839933501
-      Bat2_1: -1922212443
+      Bat2_0: 1462312243
+      Bat2_3: -1124756271
+      Bat2_2: -1586403820
+      Bat2_1: 502889042
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
