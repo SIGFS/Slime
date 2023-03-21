@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 22820959}
   - component: {fileID: 22820961}
   m_Layer: 0
-  m_Name: Ouch Tilemap
+  m_Name: Danger Tilemap
   m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1174,6 +1174,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3688319176869371668, guid: 2fb5b1923b5cd244690c4296ef2233ff, type: 3}
+      propertyPath: liquidRemaining
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3688319176869371669, guid: 2fb5b1923b5cd244690c4296ef2233ff, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1583,7 +1587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6829829462209168383, guid: ae727927d9ec64c4fba41b109eacd35b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.000007857948
+      value: 0.000007960255
       objectReference: {fileID: 0}
     - target: {fileID: 6829829462209168383, guid: ae727927d9ec64c4fba41b109eacd35b, type: 3}
       propertyPath: m_LocalRotation.y
@@ -1591,7 +1595,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6829829462209168383, guid: ae727927d9ec64c4fba41b109eacd35b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000009746292
+      value: -0.0000009873185
       objectReference: {fileID: 0}
     - target: {fileID: 6829829462209168383, guid: ae727927d9ec64c4fba41b109eacd35b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

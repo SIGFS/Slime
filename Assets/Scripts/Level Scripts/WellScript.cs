@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class WellScript : MonoBehaviour
 {
-    private float liquidRemaining;
+    public float liquidRemaining;
     private float delay;
     private float delayMax = 1f;
     BoxCollider2D well;
 
     void Start() {
         well = GetComponent<BoxCollider2D>();
-        liquidRemaining = 10f;
         delay = 1f;
     }
 
