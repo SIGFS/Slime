@@ -5,13 +5,13 @@ using UnityEngine;
 public class WellScript : MonoBehaviour
 {
     public float liquidRemaining;
-    private float delay;
+    private float delay, amountToShrink;
     private float delayMax = 1f;
-    BoxCollider2D well;
 
     void Start() {
-        well = GetComponent<BoxCollider2D>();
         delay = 1f;
+        amountToShrink = liquidRemaining / 10;
+        Debug.Log(amountToShrink);
     }
 
     void Update() {
@@ -25,7 +25,8 @@ public class WellScript : MonoBehaviour
         if(collider.tag == "Player" && liquidRemaining > 0 && delay >= delayMax && !collider.gameObject.GetComponent<SizeScript>().isMaxSize()) {
             delay = 0f;
             liquidRemaining--;
-            transform.localScale -= new Vector3(0f, 0.34f, 0f);
+            transform.localScale -= new Vector3(0f, amountToShrink, 0f);
+            SizeScript.instance.SizeChangeUp();
         }
     }
 }

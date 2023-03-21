@@ -125,14 +125,6 @@ public class SizeScript : MonoBehaviour
             RestartCheckpoint();
         }
     }
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if(collision.tag == "Well" && wellDelay >= wellDelayMax)
-        {
-            wellDelay = 0f;
-            SizeChangeUp();
-        }
-    }
 
 
 
