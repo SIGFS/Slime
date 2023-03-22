@@ -166,6 +166,7 @@ SpriteAtlas:
   - {fileID: 914364242, guid: 26480722d3f71e54fb97ad39658a5354, type: 3}
   - {fileID: -1708455995, guid: 26480722d3f71e54fb97ad39658a5354, type: 3}
   - {fileID: 387110967, guid: 26480722d3f71e54fb97ad39658a5354, type: 3}
+  - {fileID: 21300000, guid: 055bc4e2f1303a1459beca212f395709, type: 3}
   - {fileID: 21300000, guid: 2e928bb49ba791749a38989cfc09ae12, type: 3}
   - {fileID: 21300000, guid: 791809157c6663b48955225da646eeab, type: 3}
   - {fileID: -350299417, guid: 10b808f52c6f3884fa1144944f7174cb, type: 3}
@@ -182,6 +183,7 @@ SpriteAtlas:
   - {fileID: -73188324, guid: 9468fd661f4642b44b200222b173a314, type: 3}
   - {fileID: 607065597, guid: 9468fd661f4642b44b200222b173a314, type: 3}
   - {fileID: 1607692470, guid: 9468fd661f4642b44b200222b173a314, type: 3}
+  - {fileID: 21300000, guid: afd9ab07dcfef7b41902f1a417515599, type: 3}
   - {fileID: 878267626, guid: 40f9182777654fd4d9eaeb0f4c58b4d5, type: 3}
   - {fileID: -817216726, guid: 40f9182777654fd4d9eaeb0f4c58b4d5, type: 3}
   - {fileID: -6094268, guid: c5b339b7d5083c7488c3b9fcce9a9802, type: 3}
@@ -398,6 +400,7 @@ SpriteAtlas:
   - Baija_Slime1_7
   - Baija_Slime1_6
   - Baija_Slime1_8
+  - DesertMiddleNew
   - DesertBuildings
   - Baija_Floor-2.png
   - Bat2Slime_3
@@ -414,6 +417,7 @@ SpriteAtlas:
   - Baja_Slime4_1
   - Baja_Slime4_0
   - Baja_Slime4_8
+  - DesertGround
   - enemy slime_0
   - enemy slime_1
   - Well Fluid_0
