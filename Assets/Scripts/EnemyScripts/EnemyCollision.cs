@@ -30,7 +30,7 @@ public class EnemyCollision : MonoBehaviour
                 if (colBody.velocity.y < 0)
                     force -= colBody.velocity.y;
                 if (isSlimed)
-                    force *= 1.5f;
+                    force *= 1.25f;
 
                 colBody.AddForce(Vector2.up * force, ForceMode2D.Impulse);
 

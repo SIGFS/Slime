@@ -16,7 +16,8 @@ public class PlayerMovement : MonoBehaviour
 	//HOW TO: to add the scriptable object, right-click in the project window -> create -> Player Data
 	//Next, drag it into the slot in playerMovement on your player
 
-	private Animator anim;
+	private Animator playerAnim;
+	private Animator attackPointAnim;
 	public PlayerData Data;
 
 	#region Variables
@@ -69,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
 	private void Awake()
 	{
 		RB = GetComponent<Rigidbody2D>();
-		anim = GetComponent<Animator>();
+		playerAnim = GetComponent<Animator>();
 	}
 
 	private void Start()
@@ -137,7 +138,7 @@ public class PlayerMovement : MonoBehaviour
 		#region JUMP CHECKS
 		if (IsJumping && RB.velocity.y <= 0)
 		{
-			anim.SetBool("InAir", false);
+			playerAnim.SetBool("Jumping", false);
 			IsJumping = false;
 			if (!IsWallJumping)
 				_isJumpFalling = true;
@@ -346,7 +347,7 @@ public class PlayerMovement : MonoBehaviour
 		if (RB.velocity.y < 0)
 			force -= RB.velocity.y;
 
-		anim.SetBool("InAir", true);
+		playerAnim.SetBool("Jumping", true);
 		RB.AddForce(Vector2.up * force, ForceMode2D.Impulse);
 		#endregion
 	}

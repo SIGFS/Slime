@@ -5,58 +5,64 @@ using UnityEngine.SceneManagement;
 
 public class SizeScript : MonoBehaviour
 {
+    #region Declarations
     [HideInInspector]public static SizeScript instance { get; set; }
 
     [SerializeField] private GameObject player;
     [SerializeField] private PlayerData Data;
+    [Header("Position Initialization")]
     [SerializeField] private GameObject attackPoint;
+    [SerializeField] private GameObject leftWallCheck, rightWallCheck, floorCheck;
 
-    private float wellDelay;
-    private float wellDelayMax = 1f;
+    private Animator playerAnim, attackPointAnim;
+    private CircleCollider2D circleCollider;
+    #endregion
 
+    #region Unity Methods
     private void Awake()
     {
-        if(instance == null)
+        playerAnim = player.GetComponent<Animator>();
+        attackPointAnim = attackPoint.GetComponent<Animator>();
+        circleCollider = player.GetComponent<CircleCollider2D>();
+
+        if (instance == null)
         {
             instance = this;
         }
-        Data.size = 5;
+        Data.size = 3;
         dataChange();
-    }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        transform.localScale = new Vector3((float)Data.size * 0.3f, (float)Data.size * 0.3f, 0f);
+        playerAnim.SetInteger("Size", Data.size);
+        attackPointAnim.SetInteger("Size", Data.size);
+        UpdateCollider();
     }
-
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        //temp size increase / decrease using keypress
-        //commented out in in case of future need
-        /*if(Input.GetKeyDown(KeyCode.Equals)) {
-            SizeChangeUp();
-        }
-        if(Input.GetKeyDown(KeyCode.Minus)) {
+        if (collision.gameObject.tag == "Spike")
+        {
             SizeChangeDown();
-        }*/
-        wellDelay += Time.deltaTime;
+        }
+        if (collision.gameObject.tag == "DeathZone")
+        {
+            RestartCheckpoint();
+        }
     }
+    #endregion
 
+    #region Size Adjustment
     public void SizeChangeUp()
     {
         if(!isMaxSize())
         {
             Data.size += 1;
+
+            playerAnim.SetInteger("Size", Data.size);
+            attackPointAnim.SetInteger("Size", Data.size);
+            UpdateCollider();
+
             //Adjust position up to account for the change in size of object to prevent clipping through objects. Adjustment should be half of the size increase increment.
             transform.position += new Vector3(0f, 0.15f, 0f); 
-            transform.localScale = new Vector3((float)Data.size * 0.3f, (float)Data.size * 0.3f, 0f);
             dataChange();
-
-            Vector3 scale = transform.localScale;
-            scale.x = Mathf.Abs(scale.x);
-            attackPoint.transform.localScale = (scale / 3);
         }
 
     }
@@ -66,14 +72,16 @@ public class SizeScript : MonoBehaviour
         if(!isMinSize())
         {
             Data.size -= 1;
+
+            
+            playerAnim.SetInteger("Size", Data.size);
+            attackPointAnim.SetInteger("Size", Data.size);
+            UpdateCollider();
+
             //Adjust position down to put player back on floor. Adjustment should be half of the size decrease increment.
             transform.position -= new Vector3(0f, 0.15f, 0f); 
-            transform.localScale = new Vector3((float)Data.size * 0.3f, (float)Data.size * 0.3f, 0f);
             dataChange();
 
-            Vector3 scale = transform.localScale;
-            scale.x = Mathf.Abs(scale.x);
-            attackPoint.transform.localScale = (scale / 3);
         }
         else if (isMinSize())
         {
@@ -84,7 +92,9 @@ public class SizeScript : MonoBehaviour
             Invoke("RestartCheckpoint", 2f);
         }
     }
+    #endregion
 
+    #region Size Values
     public int getSize() {
         return Data.size;
     }
@@ -94,7 +104,7 @@ public class SizeScript : MonoBehaviour
     }
 
     public bool isMaxSize() {
-        if(Data.size == 10) return true;
+        if(Data.size == 5) return true;
         return false;
     }
 
@@ -102,7 +112,9 @@ public class SizeScript : MonoBehaviour
         if(Data.size == 1) return true;
         return false;
     }
+    #endregion
 
+    #region Data Update
     public void dataChange()
     {
         //formula
@@ -114,27 +126,41 @@ public class SizeScript : MonoBehaviour
         Data.jumpForce = Mathf.Abs(Data.gravityStrength) * (-.05f * getSize() + .55f);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void UpdateCollider()
     {
-        if (collision.gameObject.tag == "Spike")
+        /*
+            Size 1: 0.1355778
+            Size 2: 0.2299513
+            Size 3: 0.3302285
+            Size 4: 0.4305048
+            Size 5: 0.5397078
+             */
+
+        switch (Data.size)
         {
-            SizeChangeDown();
+            case 1:
+                circleCollider.radius = 0.1355778f;
+                break;
+            case 2:
+                circleCollider.radius = 0.2299513f;
+                break;
+            case 3:
+                circleCollider.radius = 0.3302285f;
+                break;
+            case 4:
+                circleCollider.radius = 0.4305048f;
+                break;
+            case 5:
+                circleCollider.radius = 0.5397078f;
+                break;
         }
-        if(collision.gameObject.tag == "DeathZone")
-        {
-            RestartCheckpoint();
-        }
+
+        rightWallCheck.transform.position = new Vector3(circleCollider.bounds.max.x, player.transform.position.y, 0f);
+        leftWallCheck.transform.position = new Vector3(circleCollider.bounds.min.x, player.transform.position.y, 0f);
+        floorCheck.transform.position = new Vector3(player.transform.position.x, circleCollider.bounds.min.y, 0f);
     }
 
-
-
-    /* Restart Game (Remove Later) 
-
-    Eventually
-
-    Utilize methods in other scripts that load the scene and pass an initial value to player size when the scene is loaded
-     
-     */
+    #endregion
     void RestartCheckpoint()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);

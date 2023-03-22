@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class AttackPointScript : MonoBehaviour
 {
+    #region Declarations
     [HideInInspector]public AttackPointScript instance;
 
     private float force = 2.5f;
@@ -18,7 +19,9 @@ public class AttackPointScript : MonoBehaviour
     private Transform centerPos;
     private float distance;
     private GameObject Player;
+    #endregion
 
+    #region Unity Methods
     private void Awake()
     {
         if(instance == null)
@@ -26,7 +29,7 @@ public class AttackPointScript : MonoBehaviour
             instance = this;
         }
         Player = GameObject.FindGameObjectWithTag("Player");
-        distance = Player.GetComponent<CircleCollider2D>().bounds.extents.x;
+        distance = (Player.GetComponent<CircleCollider2D>().bounds.extents.x * 0.66f);
     }
     // Start is called before the first frame update
     void Start()
@@ -56,7 +59,9 @@ public class AttackPointScript : MonoBehaviour
             Shoot(dir);
         }
     }
+    #endregion
 
+    #region User Methods
     //rotating to aim at the mouse
     void PointAtCursor(Vector2 dir)
     {
@@ -73,4 +78,5 @@ public class AttackPointScript : MonoBehaviour
             SizeScript.instance.SizeChangeDown();
         }
     }
+    #endregion
 }

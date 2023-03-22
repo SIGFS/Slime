@@ -32,8 +32,8 @@ public class PlayerData : ScriptableObject
 	[Space(20)]
 
 	[Header("Jump")]
-	public float jumpHeight = 3.5f; //Height of the player's jump
-	public float jumpTimeToApex = .3f; //Time between applying the jump force and reaching the desired jump height. These values also control the player's gravity and jump force.
+	public float jumpHeight = 3f; //Height of the player's jump
+	public float jumpTimeToApex = .5f; //Time between applying the jump force and reaching the desired jump height. These values also control the player's gravity and jump force.
 	public float jumpForce; //The actual force applied (upwards) to the player when they jump.
 
 	[Header("Both Jumps")]
@@ -62,7 +62,7 @@ public class PlayerData : ScriptableObject
 	[Range(0.01f, 0.5f)] public float jumpInputBufferTime = .1f; //Grace period after pressing jump where a jump will be automatically performed once the requirements (eg. being grounded) are met.
 
 	[Header("Size")]
-	[Range(1f, 10f)] public int size = 5; //Effects speed, jump height, ability to shoot, and scale of player. 
+	[Range(1f, 5f)] public int size = 3; //Effects speed, jump height, ability to shoot, and scale of player. 
 
 
 	//Unity Callback, called when the inspector updates
