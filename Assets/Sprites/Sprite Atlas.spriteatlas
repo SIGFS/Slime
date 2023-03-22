@@ -168,7 +168,6 @@ SpriteAtlas:
   - {fileID: 387110967, guid: 26480722d3f71e54fb97ad39658a5354, type: 3}
   - {fileID: 21300000, guid: 2e928bb49ba791749a38989cfc09ae12, type: 3}
   - {fileID: 21300000, guid: 791809157c6663b48955225da646eeab, type: 3}
-  - {fileID: 21300000, guid: 8ea8d4353812e87478dea16c7174eb5f, type: 3}
   - {fileID: -350299417, guid: 10b808f52c6f3884fa1144944f7174cb, type: 3}
   - {fileID: 1499042269, guid: 10b808f52c6f3884fa1144944f7174cb, type: 3}
   - {fileID: -611329263, guid: 10b808f52c6f3884fa1144944f7174cb, type: 3}
@@ -401,7 +400,6 @@ SpriteAtlas:
   - Baija_Slime1_8
   - DesertBuildings
   - Baija_Floor-2.png
-  - OceanExtention
   - Bat2Slime_3
   - Bat2Slime_2
   - Bat2Slime_1
