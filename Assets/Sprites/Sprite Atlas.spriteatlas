@@ -189,6 +189,25 @@ SpriteAtlas:
   - {fileID: -6094268, guid: c5b339b7d5083c7488c3b9fcce9a9802, type: 3}
   - {fileID: -206952702, guid: c5b339b7d5083c7488c3b9fcce9a9802, type: 3}
   - {fileID: 21300000, guid: ac4594a8f8981d443bf39b9dc974e737, type: 3}
+  - {fileID: 956963280, guid: 3e537529925f0394798cfd99d1a3c9be, type: 3}
+  - {fileID: 338592165, guid: 3e537529925f0394798cfd99d1a3c9be, type: 3}
+  - {fileID: -2024439705, guid: 3e537529925f0394798cfd99d1a3c9be, type: 3}
+  - {fileID: 181201425, guid: 3e537529925f0394798cfd99d1a3c9be, type: 3}
+  - {fileID: -1210019466, guid: 3e537529925f0394798cfd99d1a3c9be, type: 3}
+  - {fileID: -1655316049, guid: 3e537529925f0394798cfd99d1a3c9be, type: 3}
+  - {fileID: -1392173090, guid: 3e537529925f0394798cfd99d1a3c9be, type: 3}
+  - {fileID: 1614391681, guid: 3e537529925f0394798cfd99d1a3c9be, type: 3}
+  - {fileID: 1074990127, guid: 3e537529925f0394798cfd99d1a3c9be, type: 3}
+  - {fileID: 830744813, guid: 3e537529925f0394798cfd99d1a3c9be, type: 3}
+  - {fileID: -87602280, guid: 3e537529925f0394798cfd99d1a3c9be, type: 3}
+  - {fileID: -1155238763, guid: 3e537529925f0394798cfd99d1a3c9be, type: 3}
+  - {fileID: 979219072, guid: 3e537529925f0394798cfd99d1a3c9be, type: 3}
+  - {fileID: -1886456732, guid: 3e537529925f0394798cfd99d1a3c9be, type: 3}
+  - {fileID: 1242046977, guid: 3e537529925f0394798cfd99d1a3c9be, type: 3}
+  - {fileID: -1327288063, guid: 3e537529925f0394798cfd99d1a3c9be, type: 3}
+  - {fileID: -2062135708, guid: 3e537529925f0394798cfd99d1a3c9be, type: 3}
+  - {fileID: 522299283, guid: 3e537529925f0394798cfd99d1a3c9be, type: 3}
+  - {fileID: -1097687180, guid: 3e537529925f0394798cfd99d1a3c9be, type: 3}
   - {fileID: -1354131920, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: 1541941478, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: 1920506241, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
@@ -423,6 +442,25 @@ SpriteAtlas:
   - Well Fluid_0
   - Well Fluid_1
   - DesertFrontDunes
+  - Forest - Adam_7
+  - Forest - Adam_6
+  - Forest - Adam_5
+  - Forest - Adam_4
+  - Forest - Adam_3
+  - Forest - Adam_2
+  - Forest - Adam_1
+  - Forest - Adam_0
+  - Forest - Adam_9
+  - Forest - Adam_8
+  - Forest - Adam_12
+  - Forest - Adam_13
+  - Forest - Adam_10
+  - Forest - Adam_11
+  - Forest - Adam_16
+  - Forest - Adam_17
+  - Forest - Adam_14
+  - Forest - Adam_15
+  - Forest - Adam_18
   - Sand Tileset_8
   - Sand Tileset_9
   - Sand Tileset_19
