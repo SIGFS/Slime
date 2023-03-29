@@ -166,6 +166,14 @@ SpriteAtlas:
   - {fileID: 914364242, guid: 26480722d3f71e54fb97ad39658a5354, type: 3}
   - {fileID: -1708455995, guid: 26480722d3f71e54fb97ad39658a5354, type: 3}
   - {fileID: 387110967, guid: 26480722d3f71e54fb97ad39658a5354, type: 3}
+  - {fileID: 2056434947, guid: d7e0fd8212499ee46b8b3c4d03427e0b, type: 3}
+  - {fileID: -312943629, guid: d7e0fd8212499ee46b8b3c4d03427e0b, type: 3}
+  - {fileID: -150934359, guid: d7e0fd8212499ee46b8b3c4d03427e0b, type: 3}
+  - {fileID: -1882200967, guid: d7e0fd8212499ee46b8b3c4d03427e0b, type: 3}
+  - {fileID: 1040186753, guid: d7e0fd8212499ee46b8b3c4d03427e0b, type: 3}
+  - {fileID: 566027455, guid: d7e0fd8212499ee46b8b3c4d03427e0b, type: 3}
+  - {fileID: -498425004, guid: d7e0fd8212499ee46b8b3c4d03427e0b, type: 3}
+  - {fileID: -1280247827, guid: d7e0fd8212499ee46b8b3c4d03427e0b, type: 3}
   - {fileID: 21300000, guid: 055bc4e2f1303a1459beca212f395709, type: 3}
   - {fileID: 21300000, guid: d45a71b4410f99b45a6b1092fe6d8eae, type: 3}
   - {fileID: 21300000, guid: 2e928bb49ba791749a38989cfc09ae12, type: 3}
@@ -227,14 +235,20 @@ SpriteAtlas:
   - {fileID: -1367450868, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: -1507360043, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: -1045358994, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
+  - {fileID: 1287542549, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: -1874216211, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
+  - {fileID: 1358711889, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: 1601024616, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
+  - {fileID: 1436821331, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: -1166920926, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: 1579270674, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
+  - {fileID: 1049525599, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: 1670116814, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: -238492573, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
+  - {fileID: -526957551, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: -503004052, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: -2045407405, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
+  - {fileID: 135126233, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: -693939401, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: 1633761511, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: -1710997304, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
@@ -423,6 +437,14 @@ SpriteAtlas:
   - Baija_Slime1_7
   - Baija_Slime1_6
   - Baija_Slime1_8
+  - Sand Accesories_3
+  - Sand Accesories_2
+  - Sand Accesories_1
+  - Sand Accesories_0
+  - Sand Accesories_7
+  - Sand Accesories_6
+  - Sand Accesories_5
+  - Sand Accesories_4
   - DesertMiddleNew
   - ForestBackground
   - DesertBuildings
@@ -484,14 +506,20 @@ SpriteAtlas:
   - Sand Tileset_41
   - Sand Tileset_42
   - Sand Tileset_22
+  - Sand Tileset_43
   - Sand Tileset_23
+  - Sand Tileset_44
   - Sand Tileset_20
+  - Sand Tileset_45
   - Sand Tileset_21
   - Sand Tileset_35
+  - Sand Tileset_46
   - Sand Tileset_26
   - Sand Tileset_34
+  - Sand Tileset_47
   - Sand Tileset_27
   - Sand Tileset_37
+  - Sand Tileset_48
   - Sand Tileset_24
   - Sand Tileset_36
   - Sand Tileset_25
