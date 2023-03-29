@@ -113,7 +113,7 @@ TextureImporter:
         width: 135
         height: 155
       alignment: 9
-      pivot: {x: 0.12, y: 0.17258078}
+      pivot: {x: 0.5, y: 0.17258078}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -134,7 +134,7 @@ TextureImporter:
         width: 145
         height: 65
       alignment: 9
-      pivot: {x: 0.12, y: 0.34008342}
+      pivot: {x: 0.5, y: 0.34008342}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -155,7 +155,7 @@ TextureImporter:
         width: 130
         height: 155
       alignment: 9
-      pivot: {x: 0.12, y: 0.69329566}
+      pivot: {x: 0.5, y: 0.69329566}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -171,12 +171,12 @@ TextureImporter:
       name: Bat2_3
       rect:
         serializedVersion: 2
-        x: 485
+        x: 486
         y: 45
         width: 145
         height: 65
       alignment: 9
-      pivot: {x: 0.12, y: 0.34949023}
+      pivot: {x: 0.5, y: 0.34949023}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

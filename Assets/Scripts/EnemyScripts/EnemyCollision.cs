@@ -7,11 +7,13 @@ public class EnemyCollision : MonoBehaviour
     public bool isSlimed;
 
     private Animator enemyAnim;
+    private Collider2D myCollider;
 
     public void Awake()
     {
         isSlimed = false;
         enemyAnim = gameObject.GetComponent<Animator>();
+        myCollider = gameObject.GetComponent<Collider2D>();
     }
 
     // Start is called before the first frame update
@@ -25,25 +27,27 @@ public class EnemyCollision : MonoBehaviour
         {
             SizeScript playerSize = collision.gameObject.GetComponent<SizeScript>();
             //Check if player is above enemy, thrust upward
-            if (colPosition.position.y > transform.position.y && colPosition.position.x > transform.position.x - 0.8f && colPosition.position.x < transform.position.x + 0.8f)
+            if (colPosition.position.y > transform.position.y && colPosition.position.x > transform.position.x - myCollider.bounds.extents.x && colPosition.position.x < transform.position.x + myCollider.bounds.extents.x)
             {
-                if (colBody.velocity.y < 0)
-                    force -= colBody.velocity.y;
                 if (isSlimed)
-                    force *= 1.25f;
+                    force *= 2f;
 
                 colBody.AddForce(Vector2.up * force, ForceMode2D.Impulse);
 
                 if (!isSlimed)
                     Destroy(gameObject.transform.parent.gameObject);
             } 
-            //if player is not above, thrust backward and reduce size
+            //if player is not above, thrust backward
             else
             {
                 Vector3 direction = Vector3.Normalize(colPosition.position - transform.position);
                 colBody.AddForce(direction * force, ForceMode2D.Impulse);
-                playerSize.SizeChangeDown();
+                //If enemy is not slimed take damage
+                if (!isSlimed)
+                    playerSize.SizeChangeDown();
             }
+
+            
         }
 
         if (collision.gameObject.tag == "SlimeBall")
