@@ -30,7 +30,7 @@ public class EnemyCollision : MonoBehaviour
             if (colPosition.position.y > transform.position.y && colPosition.position.x > transform.position.x - myCollider.bounds.extents.x && colPosition.position.x < transform.position.x + myCollider.bounds.extents.x)
             {
                 if (isSlimed)
-                    force *= 2f;
+                    force *= 1.5f;
 
                 colBody.AddForce(Vector2.up * force, ForceMode2D.Impulse);
 

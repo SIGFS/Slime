@@ -201,6 +201,14 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 2e928bb49ba791749a38989cfc09ae12, type: 3}
   - {fileID: 21300000, guid: 791809157c6663b48955225da646eeab, type: 3}
   - {fileID: 21300000, guid: b76386555969b054a8bad1c3ad8af01c, type: 3}
+  - {fileID: 1777513325, guid: 81de26e5849bb6d48bb084d43c6ed830, type: 3}
+  - {fileID: -85585316, guid: 81de26e5849bb6d48bb084d43c6ed830, type: 3}
+  - {fileID: -819976609, guid: 81de26e5849bb6d48bb084d43c6ed830, type: 3}
+  - {fileID: 1928431389, guid: 81de26e5849bb6d48bb084d43c6ed830, type: 3}
+  - {fileID: -189180308, guid: 81de26e5849bb6d48bb084d43c6ed830, type: 3}
+  - {fileID: 1926578526, guid: 81de26e5849bb6d48bb084d43c6ed830, type: 3}
+  - {fileID: 630543555, guid: 81de26e5849bb6d48bb084d43c6ed830, type: 3}
+  - {fileID: -964077592, guid: 81de26e5849bb6d48bb084d43c6ed830, type: 3}
   - {fileID: -350299417, guid: 10b808f52c6f3884fa1144944f7174cb, type: 3}
   - {fileID: 1499042269, guid: 10b808f52c6f3884fa1144944f7174cb, type: 3}
   - {fileID: -611329263, guid: 10b808f52c6f3884fa1144944f7174cb, type: 3}
@@ -494,6 +502,14 @@ SpriteAtlas:
   - DesertBuildings
   - Baija_Floor-2.png
   - ForestMiddlegroundTrees
+  - Bat2 1_2
+  - Bat2 1_3
+  - Bat2 1_0
+  - Bat2 1_1
+  - Bat2 1_6
+  - Bat2 1_7
+  - Bat2 1_4
+  - Bat2 1_5
   - Bat2Slime_3
   - Bat2Slime_2
   - Bat2Slime_1
