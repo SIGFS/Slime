@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -44,7 +44,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -69,7 +69,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -980,10 +980,10 @@ TextureImporter:
       Forest Ground Tiles - Adam_36: 581123570
       Forest Ground Tiles - Adam_31: 626694878
       Forest Ground Tiles - Adam_24: -1589554060
+      Forest Ground Tiles - Adam_3: -1769764698
       Forest Ground Tiles - Adam_39: -1533117536
       Forest Ground Tiles - Adam_22: 425305139
       Forest Ground Tiles - Adam_40: 1758869355
-      Forest Ground Tiles - Adam_30: -1755385609
       Forest Ground Tiles - Adam_11: 958778128
       Forest Ground Tiles - Adam_29: -1217837613
       Forest Ground Tiles - Adam_2: -1506504714
@@ -1015,8 +1015,8 @@ TextureImporter:
       Forest Ground Tiles - Adam_0: 585020991
       Forest Ground Tiles - Adam_25: -497471130
       Forest Ground Tiles - Adam_1: -376488662
+      Forest Ground Tiles - Adam_30: -1755385609
       Forest Ground Tiles - Adam_12: -858497300
-      Forest Ground Tiles - Adam_3: -1769764698
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
