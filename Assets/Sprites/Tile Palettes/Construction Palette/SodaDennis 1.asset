@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
-  m_Name: SodaBaja 9
+  m_Name: SodaDennis 1
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  m_MinSpeed: 1
-  m_MaxSpeed: 1
+  - {fileID: 1067413162, guid: 88c6da87b8fc75d44aa81d7bf2be241b, type: 3}
+  - {fileID: 1659312319, guid: 88c6da87b8fc75d44aa81d7bf2be241b, type: 3}
+  - {fileID: 1746069492, guid: 88c6da87b8fc75d44aa81d7bf2be241b, type: 3}
+  m_MinSpeed: 3
+  m_MaxSpeed: 3
   m_AnimationStartTime: 0
   m_AnimationStartFrame: 0
   m_TileColliderType: 1
