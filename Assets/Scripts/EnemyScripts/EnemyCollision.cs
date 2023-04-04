@@ -6,6 +6,8 @@ public class EnemyCollision : MonoBehaviour
 {
     public bool isSlimed;
 
+    private bool applyForce = false;
+
     private Animator enemyAnim;
     private Collider2D myCollider;
 
@@ -21,18 +23,24 @@ public class EnemyCollision : MonoBehaviour
     {
         Transform colPosition = collision.gameObject.GetComponent<Transform>();
         Rigidbody2D colBody = collision.gameObject.GetComponent<Rigidbody2D>();
-        float force = 25f;
 
         if (collision.gameObject.tag == "Player")
         {
+            PlayerMovement playerMovement = collision.gameObject.GetComponent<PlayerMovement>();
+            float force = playerMovement.Data.jumpForce;
+
             SizeScript playerSize = collision.gameObject.GetComponent<SizeScript>();
             //Check if player is above enemy, thrust upward
-            if (colPosition.position.y > transform.position.y && colPosition.position.x > transform.position.x - myCollider.bounds.extents.x && colPosition.position.x < transform.position.x + myCollider.bounds.extents.x)
+            if (colPosition.position.y > transform.position.y /*&& colPosition.position.x > transform.position.x - myCollider.bounds.extents.x && colPosition.position.x < transform.position.x + myCollider.bounds.extents.x*/)
             {
                 if (isSlimed)
                     force *= 1.5f;
 
-                colBody.AddForce(Vector2.up * force, ForceMode2D.Impulse);
+                if (!playerMovement.IsJumping && !applyForce)
+                {
+                    applyForce = true;
+                    playerMovement.BounceEnemy(force);
+                }
 
                 if (!isSlimed)
                     Destroy(gameObject.transform.parent.gameObject);
@@ -47,7 +55,7 @@ public class EnemyCollision : MonoBehaviour
                     playerSize.SizeChangeDown();
             }
 
-            
+            applyForce = false;
         }
 
         if (collision.gameObject.tag == "SlimeBall")

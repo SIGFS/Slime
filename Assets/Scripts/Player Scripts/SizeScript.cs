@@ -17,7 +17,19 @@ public class SizeScript : MonoBehaviour
     private Animator playerAnim, attackPointAnim;
     private CircleCollider2D circleCollider;
     private Rigidbody2D playerRB;
-    [SerializeField] private GameObject groundcheck; 
+
+    //Collider Variables
+    float size1Radius = 0.1355778f;
+    float size2Radius = 0.2280836f;
+    float size3Radius = 0.3290744f;
+    float size4Radius = 0.4249443f;
+    float size5Radius = 0.5373184f;
+
+    Vector2 size1Offset = new Vector2(0.00480890274f, 0.0061096251f);
+    Vector2 size2Offset = new Vector2(0.00480890274f, 0.00797730684f);
+    Vector2 size3Offset = new Vector2(0.00480890274f, 0.00913137197f);
+    Vector2 size4Offset = new Vector2(0.00480890274f, 0.0146918297f);
+    Vector2 size5Offset = new Vector2(0.00480890274f, 0.0170812011f);
     #endregion
 
     #region Unity Methods
@@ -64,8 +76,7 @@ public class SizeScript : MonoBehaviour
             UpdateCollider();
 
             //Adjust position up to account for the change in size of object to prevent clipping through objects. Adjustment should be half of the size increase increment.
-            transform.position += new Vector3(0f, 0.15f, 0f); 
-            //dataChange();
+            transform.position += new Vector3(0f, 0.15f, 0f);
         }
 
     }
@@ -76,14 +87,12 @@ public class SizeScript : MonoBehaviour
         {
             Data.size -= 1;
 
-            
             playerAnim.SetInteger("Size", Data.size);
             attackPointAnim.SetInteger("Size", Data.size);
             UpdateCollider();
 
             //Adjust position down to put player back on floor. Adjustment should be half of the size decrease increment.
-            transform.position -= new Vector3(0f, 0.15f, 0f); 
-            //dataChange();
+            transform.position -= new Vector3(0f, 0.15f, 0f);
 
         }
         else if (isMinSize())
@@ -118,51 +127,44 @@ public class SizeScript : MonoBehaviour
     #endregion
 
     #region Data Update
-    /*public void dataChange()
-    {
-        //formula
-
-        //Data.jumpHeight = -.7777777f * getSize() + 7.7777777f;
-        *//*Data.jumpHeight = -.55f * getSize() + 5.5f;
-        Data.jumpTimeToApex = -.05f * getSize() + .55f;
-        Data.runMaxSpeed = -1.1111f * getSize() + 17.111111f;
-        Data.jumpForce = Mathf.Abs(Data.gravityStrength) * (-.05f * getSize() + .55f);*//*
-    }*/
 
     void UpdateCollider()
     {
-        /*
-            Size 1: 0.1355778
-            Size 2: 0.2299513
-            Size 3: 0.3302285
-            Size 4: 0.4305048
-            Size 5: 0.5397078
-             */
 
         switch (Data.size)
         {
             case 1:
-                circleCollider.radius = 0.1355778f;
+                circleCollider.radius = size1Radius;
+                circleCollider.offset = size1Offset;
+
                 playerRB.mass = .9f;
                 player.GetComponent<PlayerMovement>()._groundCheckSize = new Vector2(0.6f, 0.03f);
                 break;
             case 2:
-                circleCollider.radius = 0.2299513f;
+                circleCollider.radius = size2Radius;
+                circleCollider.offset = size2Offset;
+
                 playerRB.mass = 1f;
                 player.GetComponent<PlayerMovement>()._groundCheckSize = new Vector2(1.05f, 0.03f);
                 break;
             case 3:
-                circleCollider.radius = 0.3302285f;
+                circleCollider.radius = size3Radius;
+                circleCollider.offset = size3Offset;
+
                 playerRB.mass = 1.15f;
                 player.GetComponent<PlayerMovement>()._groundCheckSize = new Vector2(1.54f, 0.03f);
                 break;
             case 4:
-                circleCollider.radius = 0.4305048f;
+                circleCollider.radius = size4Radius;
+                circleCollider.offset = size4Offset;
+
                 playerRB.mass = 1.3f;
                 player.GetComponent<PlayerMovement>()._groundCheckSize = new Vector2(2f, 0.03f);
                 break;
             case 5:
-                circleCollider.radius = 0.5397078f;
+                circleCollider.radius = size5Radius;
+                circleCollider.offset = size5Offset;
+
                 playerRB.mass = 1.75f;
                 player.GetComponent<PlayerMovement>()._groundCheckSize = new Vector2(2.5f, 0.03f);
                 break;
@@ -170,7 +172,7 @@ public class SizeScript : MonoBehaviour
 
         rightWallCheck.transform.position = new Vector3(circleCollider.bounds.max.x, player.transform.position.y, 0f);
         leftWallCheck.transform.position = new Vector3(circleCollider.bounds.min.x, player.transform.position.y, 0f);
-        floorCheck.transform.position = new Vector3(player.transform.position.x, circleCollider.bounds.min.y, 0f);
+        floorCheck.transform.position = new Vector3(player.transform.position.x, circleCollider.bounds.min.y - (circleCollider.bounds.min.y / 150f), 0f);
     }
 
     #endregion

@@ -7,15 +7,16 @@ using UnityEngine.Tilemaps;
 
 public class SlimeBallScript : MonoBehaviour
 {
+    #region Declarations
     public GameObject bouncePrefab;
 
     private bool hitLeft, hitRight, hitUp, hitDown = false;
-    private bool hitLeftTopCorner, hitLeftBottomCorner, hitRightTopCorner, hitRightBottomCorner = false;
-
-    private GameObject newPad;
 
     private Tilemap tilemp;
 
+    #endregion
+
+    #region Unity Methods
     private void Start()
     {
         tilemp = GameObject.Find("Platform Tilemap").GetComponent<Tilemap>();
@@ -25,8 +26,8 @@ public class SlimeBallScript : MonoBehaviour
         //stoping on hit
         if (collision.gameObject.layer == 7) //If hits ground layer
         {
-            Vector3Int playerPos = tilemp.WorldToCell(transform.position);
-            DirectionCheck(playerPos);
+            Vector3Int collisionPos = tilemp.WorldToCell(transform.position);
+            DirectionCheck(collisionPos);
 
             if (hitLeft)
             {
@@ -44,32 +45,16 @@ public class SlimeBallScript : MonoBehaviour
             {
                 Instantiate(bouncePrefab, new Vector2(transform.position.x, transform.position.y - 0.6f), Quaternion.Euler(0f, 0f, 0f));
             }
-
-            if (hitLeftTopCorner)
-            {
-                Instantiate(bouncePrefab, new Vector2(transform.position.x - 0.7f, transform.position.y), Quaternion.Euler(0f, 0f, -135f));
-            }
-            if (hitLeftBottomCorner)
-            {
-                Instantiate(bouncePrefab, new Vector2(transform.position.x - 0.4f, transform.position.y - 0.3f), Quaternion.Euler(0f, 0f, -45f));
-            }
-            if (hitRightTopCorner)
-            {
-                Instantiate(bouncePrefab, new Vector2(transform.position.x + 0.7f, transform.position.y), Quaternion.Euler(0f, 0f, 135f));
-            }
-            if (hitRightBottomCorner)
-            {
-                Instantiate(bouncePrefab, new Vector2(transform.position.x + 0.4f, transform.position.y - 0.3f), Quaternion.Euler(0f, 0f, 45f));
-            }
             gameObject.SetActive(false);
         }
         if(collision.gameObject.tag == "Enemy")
         {
             gameObject.SetActive(false);
         }
-        
     }
+    #endregion
 
+    #region Check Spawning Orientation
     void DirectionCheck(Vector3Int playerPos)
     {
         Vector3Int leftCheck = new Vector3Int(playerPos.x - 1, playerPos.y, playerPos.z);
@@ -93,23 +78,6 @@ public class SlimeBallScript : MonoBehaviour
         {
             hitDown = true;
         }
-        if (tilemp.GetTile(leftCheck) != null && tilemp.GetTile(upCheck) != null)
-        {
-            hitLeftTopCorner = true;
-        }
-        if (tilemp.GetTile(leftCheck) != null && tilemp.GetTile(downCheck) != null)
-        {
-            hitLeftBottomCorner = true;
-        }
-        if (tilemp.GetTile(rightCheck) != null && tilemp.GetTile(upCheck) != null)
-        {
-            hitRightTopCorner = true;
-        }
-        if (tilemp.GetTile(rightCheck) != null && tilemp.GetTile(downCheck) != null)
-        {
-            hitRightBottomCorner = true;
-        }
-
-
     }
+    #endregion
 }
