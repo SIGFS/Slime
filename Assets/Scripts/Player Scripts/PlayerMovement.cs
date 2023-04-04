@@ -125,7 +125,7 @@ public class PlayerMovement : MonoBehaviour
 					|| (Physics2D.OverlapBox(_backWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && !IsFacingRight)) && !IsWallJumping)
 				LastOnWallRightTime = Data.coteTime;
 
-			//Right Wall Check
+			//Left Wall Check
 			if (((Physics2D.OverlapBox(_frontWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && !IsFacingRight)
 				|| (Physics2D.OverlapBox(_backWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && IsFacingRight)) && !IsWallJumping)
 				LastOnWallLeftTime = Data.coteTime;
@@ -167,6 +167,7 @@ public class PlayerMovement : MonoBehaviour
 			Jump();
 		}
 		//WALL JUMP
+		/*
 		else if (CanWallJump() && LastPressedJumpTime > 0)
 		{
 			IsWallJumping = true;
@@ -175,25 +176,30 @@ public class PlayerMovement : MonoBehaviour
 			_isJumpFalling = false;
 			_wallJumpStartTime = Time.time;
 			_lastWallJumpDir = (LastOnWallRightTime > 0) ? -1 : 1;
-
 			WallJump(_lastWallJumpDir);
-		}
+			
+			}
+		*/
 		#endregion
 
+		/*
 		#region SLIDE CHECKS
 		if (CanSlide() && ((LastOnWallLeftTime > 0 && _moveInput.x < 0) || (LastOnWallRightTime > 0 && _moveInput.x > 0)))
 			IsSliding = true;
 		else
 			IsSliding = false;
 		#endregion
+		*/
 
 		#region GRAVITY
 		//Higher gravity if we've released the jump input or are falling
+		/*
 		if (IsSliding)
 		{
 			SetGravityScale(0);
 		}
-		else if (RB.velocity.y < 0 && _moveInput.y < 0)
+		*/
+		if (RB.velocity.y < 0 && _moveInput.y < 0)
 		{
 			//Much higher gravity if holding down
 			SetGravityScale(Data.gravityScale * Data.fastFallGravityMult);
@@ -228,14 +234,18 @@ public class PlayerMovement : MonoBehaviour
 	private void FixedUpdate()
 	{
 		//Handle Run
+		/*
 		if (IsWallJumping)
 			Run(Data.wallJumpRunLerp);
 		else
-			Run(1);
+		*/
+		Run(1);
 
 		//Handle Slide
+		/*
 		if (IsSliding)
 			Slide();
+		*/
 	}
 
 	#region INPUT CALLBACKS
@@ -247,7 +257,7 @@ public class PlayerMovement : MonoBehaviour
 
 	public void OnJumpUpInput()
 	{
-		if (CanJumpCut() || CanWallJumpCut())
+		if (CanJumpCut()/* || CanWallJumpCut()*/)
 			_isJumpCut = true;
 	}
 	#endregion
@@ -352,6 +362,7 @@ public class PlayerMovement : MonoBehaviour
 		#endregion
 	}
 
+	/*
 	private void WallJump(int dir)
 	{
 		//Ensures we can't call Wall Jump multiple times from one press
@@ -375,9 +386,11 @@ public class PlayerMovement : MonoBehaviour
 		RB.AddForce(force, ForceMode2D.Impulse);
 		#endregion
 	}
+	*/
 	#endregion
 
 	#region OTHER MOVEMENT METHODS
+	/*
 	private void Slide()
 	{
 		//Works the same as the Run but only in the y-axis
@@ -390,6 +403,7 @@ public class PlayerMovement : MonoBehaviour
 
 		RB.AddForce(movement * Vector2.up);
 	}
+	*/
 	#endregion
 
 
@@ -407,21 +421,25 @@ public class PlayerMovement : MonoBehaviour
 		return LastOnGroundTime > 0 && !IsJumping;
 	}
 
+	/*
 	private bool CanWallJump()
 	{
 		return LastPressedJumpTime > 0 && LastOnWallTime > 0 && LastOnGroundTime <= 0 && (!IsWallJumping ||
 			 (LastOnWallRightTime > 0 && _lastWallJumpDir == 1) || (LastOnWallLeftTime > 0 && _lastWallJumpDir == -1));
 	}
+	*/
 
 	private bool CanJumpCut()
 	{
 		return IsJumping && RB.velocity.y > 0;
 	}
 
+	/*
 	private bool CanWallJumpCut()
 	{
 		return IsWallJumping && RB.velocity.y > 0;
 	}
+	
 
 	public bool CanSlide()
 	{
@@ -430,6 +448,7 @@ public class PlayerMovement : MonoBehaviour
 		else
 			return false;
 	}
+	*/
 	#endregion
 
 

@@ -457,6 +457,14 @@ SpriteAtlas:
   - {fileID: 633030775, guid: eb1b70ea60ada314ab15d04010415f02, type: 3}
   - {fileID: 21300000, guid: 1ab2eb2b88cae7b42b33333eb73fdaf7, type: 3}
   - {fileID: 21300000, guid: 96b2785bc2cf44a4cb849412b3c0e1cd, type: 3}
+  - {fileID: -1477842175, guid: 7280b3abef75f454f929718fae411c6e, type: 3}
+  - {fileID: 1148869263, guid: 7280b3abef75f454f929718fae411c6e, type: 3}
+  - {fileID: 1906048269, guid: 7280b3abef75f454f929718fae411c6e, type: 3}
+  - {fileID: 667814841, guid: 7280b3abef75f454f929718fae411c6e, type: 3}
+  - {fileID: -866984540, guid: 7280b3abef75f454f929718fae411c6e, type: 3}
+  - {fileID: -189224955, guid: 7280b3abef75f454f929718fae411c6e, type: 3}
+  - {fileID: -2143670097, guid: 7280b3abef75f454f929718fae411c6e, type: 3}
+  - {fileID: -564475333, guid: 7280b3abef75f454f929718fae411c6e, type: 3}
   - {fileID: -870183028, guid: 069e708c3e69e0440b13f06495028639, type: 3}
   - {fileID: -1470936218, guid: 069e708c3e69e0440b13f06495028639, type: 3}
   - {fileID: 1362523398, guid: 069e708c3e69e0440b13f06495028639, type: 3}
@@ -892,6 +900,14 @@ SpriteAtlas:
   - Baja_Slime2_2
   - DesertSky
   - DesertMiddleDunes
+  - Scorpion_3
+  - Scorpion_2
+  - Scorpion
+  - Scorpion_5
+  - Scorpion_4
+  - Scorpion_7
+  - Scorpion_6
+  - Scorpion_1
   - Big Rock_12
   - Big Rock_13
   - Big Rock_10
