@@ -16,6 +16,8 @@ public class SizeScript : MonoBehaviour
 
     private Animator playerAnim, attackPointAnim;
     private CircleCollider2D circleCollider;
+    private Rigidbody2D playerRB;
+    [SerializeField] private GameObject groundcheck; 
     #endregion
 
     #region Unity Methods
@@ -24,13 +26,14 @@ public class SizeScript : MonoBehaviour
         playerAnim = player.GetComponent<Animator>();
         attackPointAnim = attackPoint.GetComponent<Animator>();
         circleCollider = player.GetComponent<CircleCollider2D>();
+        playerRB = player.GetComponent<Rigidbody2D>();
 
         if (instance == null)
         {
             instance = this;
         }
         Data.size = 3;
-        dataChange();
+        //dataChange();
 
         playerAnim.SetInteger("Size", Data.size);
         attackPointAnim.SetInteger("Size", Data.size);
@@ -62,7 +65,7 @@ public class SizeScript : MonoBehaviour
 
             //Adjust position up to account for the change in size of object to prevent clipping through objects. Adjustment should be half of the size increase increment.
             transform.position += new Vector3(0f, 0.15f, 0f); 
-            dataChange();
+            //dataChange();
         }
 
     }
@@ -80,7 +83,7 @@ public class SizeScript : MonoBehaviour
 
             //Adjust position down to put player back on floor. Adjustment should be half of the size decrease increment.
             transform.position -= new Vector3(0f, 0.15f, 0f); 
-            dataChange();
+            //dataChange();
 
         }
         else if (isMinSize())
@@ -115,16 +118,16 @@ public class SizeScript : MonoBehaviour
     #endregion
 
     #region Data Update
-    public void dataChange()
+    /*public void dataChange()
     {
         //formula
 
         //Data.jumpHeight = -.7777777f * getSize() + 7.7777777f;
-        Data.jumpHeight = -.55f * getSize() + 5.5f;
+        *//*Data.jumpHeight = -.55f * getSize() + 5.5f;
         Data.jumpTimeToApex = -.05f * getSize() + .55f;
         Data.runMaxSpeed = -1.1111f * getSize() + 17.111111f;
-        Data.jumpForce = Mathf.Abs(Data.gravityStrength) * (-.05f * getSize() + .55f);
-    }
+        Data.jumpForce = Mathf.Abs(Data.gravityStrength) * (-.05f * getSize() + .55f);*//*
+    }*/
 
     void UpdateCollider()
     {
@@ -140,18 +143,28 @@ public class SizeScript : MonoBehaviour
         {
             case 1:
                 circleCollider.radius = 0.1355778f;
+                playerRB.mass = .9f;
+                player.GetComponent<PlayerMovement>()._groundCheckSize = new Vector2(0.6f, 0.03f);
                 break;
             case 2:
                 circleCollider.radius = 0.2299513f;
+                playerRB.mass = 1f;
+                player.GetComponent<PlayerMovement>()._groundCheckSize = new Vector2(1.05f, 0.03f);
                 break;
             case 3:
                 circleCollider.radius = 0.3302285f;
+                playerRB.mass = 1.15f;
+                player.GetComponent<PlayerMovement>()._groundCheckSize = new Vector2(1.54f, 0.03f);
                 break;
             case 4:
                 circleCollider.radius = 0.4305048f;
+                playerRB.mass = 1.3f;
+                player.GetComponent<PlayerMovement>()._groundCheckSize = new Vector2(2f, 0.03f);
                 break;
             case 5:
                 circleCollider.radius = 0.5397078f;
+                playerRB.mass = 1.75f;
+                player.GetComponent<PlayerMovement>()._groundCheckSize = new Vector2(2.5f, 0.03f);
                 break;
         }
 

@@ -57,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
 	[Header("Checks")]
 	[SerializeField] private Transform _groundCheckPoint;
 	//Size of groundCheck depends on the size of your character generally you want them slightly small than width (for ground) and height (for the wall check)
-	[SerializeField] private Vector2 _groundCheckSize = new Vector2(0.49f, 0.03f);
+	[SerializeField] public Vector2 _groundCheckSize = new Vector2(0.49f, 0.03f);
 	[Space(5)]
 	[SerializeField] private Transform _frontWallCheckPoint;
 	[SerializeField] private Transform _backWallCheckPoint;
@@ -144,10 +144,11 @@ public class PlayerMovement : MonoBehaviour
 				_isJumpFalling = true;
 		}
 
+		/*
 		if (IsWallJumping && Time.time - _wallJumpStartTime > Data.wallJumpTime)
 		{
 			IsWallJumping = false;
-		}
+		}*/
 
 		if (LastOnGroundTime > 0 && !IsJumping && !IsWallJumping)
 		{
