@@ -10,7 +10,7 @@ public class SlimeBallScript : MonoBehaviour
     #region Declarations
     public GameObject bouncePrefab;
 
-    private bool hitLeft, hitRight, hitUp, hitDown = false;
+    private int hitDirection = 5;
 
     private Tilemap tilemp;
 
@@ -26,24 +26,29 @@ public class SlimeBallScript : MonoBehaviour
         //stoping on hit
         if (collision.gameObject.layer == 7) //If hits ground layer
         {
-            Vector3Int collisionPos = tilemp.WorldToCell(transform.position);
-            DirectionCheck(collisionPos);
+            Vector2 collisionPoint = collision.GetContact(0).point;
+            DirectionCheck(collisionPoint);
 
-            if (hitLeft)
+            switch (hitDirection)
             {
-                Instantiate(bouncePrefab, new Vector2(transform.position.x - 0.7f, transform.position.y), Quaternion.Euler(0f,0f,-90f));
-            }
-            if (hitRight)
-            {
-                Instantiate(bouncePrefab, new Vector2(transform.position.x + 0.7f, transform.position.y), Quaternion.Euler(0f, 0f, 90f));
-            }
-            if (hitUp)
-            {
-                Instantiate(bouncePrefab, new Vector2(transform.position.x, transform.position.y + 0.7f), Quaternion.Euler(0f, 0f, 180f));
-            }
-            if (hitDown)
-            {
-                Instantiate(bouncePrefab, new Vector2(transform.position.x, transform.position.y - 0.6f), Quaternion.Euler(0f, 0f, 0f));
+                case 0/*Right*/:
+                    {
+                        Instantiate(bouncePrefab, new Vector2(collisionPoint.x, collisionPoint.y), Quaternion.Euler(0f, 0f, 90f));
+                        Debug.Log("Spawn Right");
+                        break;
+                    }
+                case 1/*Down*/:
+                    {
+                        Instantiate(bouncePrefab, new Vector2(collisionPoint.x, collisionPoint.y), Quaternion.Euler(0f, 0f, 0f));
+                        Debug.Log("Spawn Down");
+                        break;
+                    }
+                case 2/*Left*/:
+                    {
+                        Instantiate(bouncePrefab, new Vector2(collisionPoint.x, collisionPoint.y), Quaternion.Euler(0f, 0f, -90f));
+                        Debug.Log("Spawn Left");
+                        break;
+                    }
             }
             gameObject.SetActive(false);
         }
@@ -55,29 +60,25 @@ public class SlimeBallScript : MonoBehaviour
     #endregion
 
     #region Check Spawning Orientation
-    void DirectionCheck(Vector3Int playerPos)
+    void DirectionCheck(Vector2 point)
     {
-        Vector3Int leftCheck = new Vector3Int(playerPos.x - 1, playerPos.y, playerPos.z);
-        Vector3Int rightCheck = new Vector3Int(playerPos.x + 1, playerPos.y, playerPos.z);
-        Vector3Int upCheck = new Vector3Int(playerPos.x, playerPos.y + 1, playerPos.z);
-        Vector3Int downCheck = new Vector3Int(playerPos.x, playerPos.y - 1, playerPos.z);
+        //Raycast collision point
+        if(Physics2D.Raycast(point, Vector2.right, 0.1f))
+        {
+            //Right
+            hitDirection = 0;
+        }
+        if (Physics2D.Raycast(point, Vector2.down, 0.1f))
+        {
+            //Down
+            hitDirection = 1;
+        }
+        if (Physics2D.Raycast(point, Vector2.left, 0.1f))
+        {
+            //Left
+            hitDirection = 2;
+        }
 
-        if(tilemp.GetTile(leftCheck) != null && (tilemp.GetTile(upCheck) == null && tilemp.GetTile(downCheck) == null))
-        {
-            hitLeft = true;
-        }
-        if (tilemp.GetTile(rightCheck) != null && (tilemp.GetTile(upCheck) == null && tilemp.GetTile(downCheck) == null))
-        {
-            hitRight = true;
-        }
-        if (tilemp.GetTile(upCheck) != null && (tilemp.GetTile(leftCheck) == null && tilemp.GetTile(rightCheck) == null))
-        {
-            hitUp = true;
-        }
-        if (tilemp.GetTile(downCheck) != null && (tilemp.GetTile(leftCheck) == null && tilemp.GetTile(rightCheck) == null))
-        {
-            hitDown = true;
-        }
     }
     #endregion
 }
