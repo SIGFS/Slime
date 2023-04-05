@@ -109,9 +109,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
-        width: 32
-        height: 32
+        y: 256
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,8 +119,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 693af848a9b152b4aa8e283235d15007
-      internalID: 328913493
+      spriteID: f36f7085d3fa3074faf808e28149c422
+      internalID: -1423835043
       vertices: []
       indices: 
       edges: []
@@ -129,10 +129,10 @@ TextureImporter:
       name: MiniSlime_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
+        x: 128
+        y: 256
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e013e251e6806c49bd47505b6f2d493
-      internalID: 2046157074
+      spriteID: 95a943dd6e52a7a45b462648ad83919d
+      internalID: -580994608
       vertices: []
       indices: 
       edges: []
@@ -151,9 +151,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 32
-        height: 32
+        y: 128
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,8 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c8ee096f625760409fadddba9334970
-      internalID: 971373495
+      spriteID: e82b4ed10c9cd8e43b77aadc74dc026f
+      internalID: 714155438
       vertices: []
       indices: 
       edges: []
@@ -171,10 +171,10 @@ TextureImporter:
       name: MiniSlime_3
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
+        x: 128
+        y: 128
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,8 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf33e903b83c34f4b91fc2d93b54c910
-      internalID: 1434108544
+      spriteID: 487d5b08ea839214ab767975ed0f3e90
+      internalID: -1779567850
       vertices: []
       indices: 
       edges: []
@@ -194,8 +194,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,8 +203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1230f3e75c8fdc641bede83d051d058d
-      internalID: -211091467
+      spriteID: 57c4f72dc3455e34387b0e4358400b3e
+      internalID: 628418919
       vertices: []
       indices: 
       edges: []
@@ -220,11 +220,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      MiniSlime_1: 2046157074
-      MiniSlime_2: 971373495
-      MiniSlime_3: 1434108544
-      MiniSlime_0: 328913493
-      MiniSlime_4: -211091467
+      MiniSlime_1: -580994608
+      MiniSlime_2: 714155438
+      MiniSlime_3: -1779567850
+      MiniSlime_0: -1423835043
+      MiniSlime_4: 628418919
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
