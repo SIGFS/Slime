@@ -166,6 +166,10 @@ SpriteAtlas:
   - {fileID: 914364242, guid: 26480722d3f71e54fb97ad39658a5354, type: 3}
   - {fileID: -1708455995, guid: 26480722d3f71e54fb97ad39658a5354, type: 3}
   - {fileID: 387110967, guid: 26480722d3f71e54fb97ad39658a5354, type: 3}
+  - {fileID: 199706567, guid: d92fc152fbfff864d8d4876dcc231104, type: 3}
+  - {fileID: -692860913, guid: d92fc152fbfff864d8d4876dcc231104, type: 3}
+  - {fileID: 1305716286, guid: d92fc152fbfff864d8d4876dcc231104, type: 3}
+  - {fileID: -1113220678, guid: d92fc152fbfff864d8d4876dcc231104, type: 3}
   - {fileID: 881661651, guid: d7e0fd8212499ee46b8b3c4d03427e0b, type: 3}
   - {fileID: -241445161, guid: d7e0fd8212499ee46b8b3c4d03427e0b, type: 3}
   - {fileID: 2056434947, guid: d7e0fd8212499ee46b8b3c4d03427e0b, type: 3}
@@ -491,6 +495,10 @@ SpriteAtlas:
   - {fileID: 139156160, guid: 8c74926e1644b6c44881229882f5778f, type: 3}
   - {fileID: 2022651506, guid: 8c74926e1644b6c44881229882f5778f, type: 3}
   - {fileID: 375292550, guid: 8c74926e1644b6c44881229882f5778f, type: 3}
+  - {fileID: 2118319676, guid: 76ce7d7f6d0e5e440abc4b624295f0be, type: 3}
+  - {fileID: -1660955108, guid: 76ce7d7f6d0e5e440abc4b624295f0be, type: 3}
+  - {fileID: -1564769777, guid: 76ce7d7f6d0e5e440abc4b624295f0be, type: 3}
+  - {fileID: 1422995146, guid: 76ce7d7f6d0e5e440abc4b624295f0be, type: 3}
   - {fileID: 1937334470, guid: d48253ffda0b7a54997a82d835980c53, type: 3}
   - {fileID: 916339725, guid: d48253ffda0b7a54997a82d835980c53, type: 3}
   - {fileID: 1810521962, guid: d48253ffda0b7a54997a82d835980c53, type: 3}
@@ -612,6 +620,10 @@ SpriteAtlas:
   - Baija_Slime1_7
   - Baija_Slime1_6
   - Baija_Slime1_8
+  - Snake_0
+  - Snake_1
+  - Snake_2
+  - Snake_3
   - Sand Accesories_9
   - Sand Accesories_8
   - Sand Accesories_3
@@ -937,6 +949,10 @@ SpriteAtlas:
   - MiniSlimeSlimed_2
   - MiniSlimeSlimed_1
   - MiniSlimeSlimed_0
+  - SnakeSlimed_0
+  - SnakeSlimed_1
+  - SnakeSlimed_2
+  - SnakeSlimed_3
   - EnemySlimePlaceHolder_3
   - EnemySlimePlaceHolder_2
   - EnemySlimePlaceHolder_1
