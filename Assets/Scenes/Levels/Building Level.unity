@@ -37404,6 +37404,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1237984871362543916, guid: c6cf3995a83525c4783c6bc445746099, type: 3}
+      propertyPath: NumOfFlashes
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1237984871362543916, guid: c6cf3995a83525c4783c6bc445746099, type: 3}
+      propertyPath: IFrameDuration
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6cf3995a83525c4783c6bc445746099, type: 3}
 --- !u!4 &1793659086 stripped
@@ -37460,7 +37468,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6829829462209168383, guid: ae727927d9ec64c4fba41b109eacd35b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.000017989181
+      value: 0.000018025787
       objectReference: {fileID: 0}
     - target: {fileID: 6829829462209168383, guid: ae727927d9ec64c4fba41b109eacd35b, type: 3}
       propertyPath: m_LocalRotation.y
@@ -37468,7 +37476,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6829829462209168383, guid: ae727927d9ec64c4fba41b109eacd35b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000022312163
+      value: -0.0000022357565
       objectReference: {fileID: 0}
     - target: {fileID: 6829829462209168383, guid: ae727927d9ec64c4fba41b109eacd35b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

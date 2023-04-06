@@ -17,6 +17,7 @@ public class SizeScript : MonoBehaviour
     private Animator playerAnim, attackPointAnim;
     private CircleCollider2D circleCollider;
     private Rigidbody2D playerRB;
+    private SpriteRenderer spriteRend;
 
     //Collider Variables
     float size1Radius = 0.1355778f;
@@ -24,6 +25,10 @@ public class SizeScript : MonoBehaviour
     float size3Radius = 0.3290744f;
     float size4Radius = 0.4249443f;
     float size5Radius = 0.5373184f;
+
+    //Iframe info
+    [SerializeField] private float IFrameDuration;
+    [SerializeField] private float NumOfFlashes;
 
     Vector2 size1Offset = new Vector2(0.00480890274f, 0.0061096251f);
     Vector2 size2Offset = new Vector2(0.00480890274f, 0.00797730684f);
@@ -39,6 +44,7 @@ public class SizeScript : MonoBehaviour
         attackPointAnim = attackPoint.GetComponent<Animator>();
         circleCollider = player.GetComponent<CircleCollider2D>();
         playerRB = player.GetComponent<Rigidbody2D>();
+        spriteRend = player.GetComponent<SpriteRenderer>();
 
         if (instance == null)
         {
@@ -104,6 +110,27 @@ public class SizeScript : MonoBehaviour
             Invoke("RestartCheckpoint", 2f);
         }
     }
+    #endregion
+
+    #region IFrames
+
+    public IEnumerator Invulnerability()
+    {
+        SizeChangeDown();
+        Physics2D.IgnoreLayerCollision(3, 8, true);
+        //Invuln Duration
+        for (int i = 0; i < NumOfFlashes; i++)
+        {
+            spriteRend.color = new Color(1, 0, 0, 0.5f);
+            yield return  new WaitForSeconds(IFrameDuration / NumOfFlashes);
+            spriteRend.color = Color.white;
+            yield return new WaitForSeconds(IFrameDuration / NumOfFlashes);
+            
+        }
+
+        Physics2D.IgnoreLayerCollision(3, 8, false);
+    }
+
     #endregion
 
     #region Size Values

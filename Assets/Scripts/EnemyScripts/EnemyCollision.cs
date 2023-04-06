@@ -51,8 +51,14 @@ public class EnemyCollision : MonoBehaviour
                 Vector3 direction = Vector3.Normalize(colPosition.position - transform.position);
                 colBody.AddForce(direction * force, ForceMode2D.Impulse);
                 //If enemy is not slimed take damage
+
+                
+                
+
                 if (!isSlimed)
-                    playerSize.SizeChangeDown();
+                    //playerSize.SizeChangeDown();
+                    //Iframe coroutine
+                    StartCoroutine(playerSize.Invulnerability());
             }
 
             applyForce = false;

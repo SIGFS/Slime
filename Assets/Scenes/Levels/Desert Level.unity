@@ -2816,6 +2816,14 @@ PrefabInstance:
       propertyPath: _groundCheckSize.x
       value: 0.47
       objectReference: {fileID: 0}
+    - target: {fileID: 1237984871362543916, guid: c6cf3995a83525c4783c6bc445746099, type: 3}
+      propertyPath: NumOfFlashes
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1237984871362543916, guid: c6cf3995a83525c4783c6bc445746099, type: 3}
+      propertyPath: IFrameDuration
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 1237984871625001955, guid: c6cf3995a83525c4783c6bc445746099, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.31
@@ -27380,7 +27388,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6829829462209168383, guid: ae727927d9ec64c4fba41b109eacd35b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.00004218813
+      value: 0.00004231484
       objectReference: {fileID: 0}
     - target: {fileID: 6829829462209168383, guid: ae727927d9ec64c4fba41b109eacd35b, type: 3}
       propertyPath: m_LocalRotation.y
@@ -27388,7 +27396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6829829462209168383, guid: ae727927d9ec64c4fba41b109eacd35b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000052326363
+      value: -0.0000052483524
       objectReference: {fileID: 0}
     - target: {fileID: 6829829462209168383, guid: ae727927d9ec64c4fba41b109eacd35b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
