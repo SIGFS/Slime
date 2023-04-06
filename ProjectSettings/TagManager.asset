@@ -13,6 +13,7 @@ TagManager:
   - BouncePad
   - DeathZone
   - World
+  - Moving Platform
   layers:
   - Default
   - TransparentFX

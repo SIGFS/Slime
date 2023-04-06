@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 2684719642057877134}
   m_Layer: 7
   m_Name: Desert Moving Platfrom
-  m_TagString: Ground
+  m_TagString: Moving Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
