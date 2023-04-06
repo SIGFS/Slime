@@ -12,6 +12,7 @@ TagManager:
   - AttackPoint
   - BouncePad
   - DeathZone
+  - World
   layers:
   - Default
   - TransparentFX
