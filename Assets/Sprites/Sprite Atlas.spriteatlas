@@ -64,6 +64,9 @@ SpriteAtlas:
   - {fileID: -226638858, guid: a70c55c0d6d09e74c943b7814a7370cb, type: 3}
   - {fileID: 434640204, guid: a70c55c0d6d09e74c943b7814a7370cb, type: 3}
   - {fileID: -1268277078, guid: a70c55c0d6d09e74c943b7814a7370cb, type: 3}
+  - {fileID: -1410305964, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
+  - {fileID: -1840308502, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
+  - {fileID: -517083576, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
   - {fileID: -682333198, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
   - {fileID: 415264895, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
   - {fileID: 1097984154, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
@@ -118,24 +121,30 @@ SpriteAtlas:
   - {fileID: -734889903, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
   - {fileID: -493632467, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
   - {fileID: -1352044167, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
+  - {fileID: 1487160687, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
   - {fileID: 353483013, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
+  - {fileID: -760425627, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
   - {fileID: -828425816, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
   - {fileID: 1703074506, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
   - {fileID: -36355656, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
   - {fileID: -1779082653, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
   - {fileID: -1356145917, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
   - {fileID: 1107092762, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
+  - {fileID: -339116090, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
   - {fileID: 557899913, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
   - {fileID: 1234778070, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
   - {fileID: -1487132524, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
+  - {fileID: -236989954, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
   - {fileID: -1566027903, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
   - {fileID: 1621524548, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
   - {fileID: 1929172008, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
   - {fileID: 784623024, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
+  - {fileID: 209974646, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
   - {fileID: -1695799775, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
   - {fileID: 1969382256, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
   - {fileID: -1549892458, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
   - {fileID: -1949626803, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
+  - {fileID: -425005261, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
   - {fileID: -842404692, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
   - {fileID: 321323509, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
   - {fileID: -1503178493, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
@@ -152,6 +161,7 @@ SpriteAtlas:
   - {fileID: -1597341304, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
   - {fileID: 220265990, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
   - {fileID: 1624647142, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
+  - {fileID: -969234559, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
   - {fileID: -1877388454, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
   - {fileID: 1425122625, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
   - {fileID: -1978931986, guid: 49b87ce1c41f074469e6135d8c955008, type: 3}
@@ -591,6 +601,9 @@ SpriteAtlas:
   - Baja_Slime5_3
   - Baja_Slime5_0
   - Baja_Slime5_1
+  - Construction Tileset_100
+  - Construction Tileset_101
+  - Construction Tileset_102
   - Construction Tileset_61
   - Construction Tileset_60
   - Construction Tileset_63
@@ -645,24 +658,30 @@ SpriteAtlas:
   - Construction Tileset_59
   - Construction Tileset_49
   - Construction Tileset_48
+  - Construction Tileset_98
   - Construction Tileset_50
+  - Construction Tileset_99
   - Construction Tileset_51
   - Construction Tileset_29
   - Construction Tileset_52
   - Construction Tileset_28
   - Construction Tileset_53
   - Construction Tileset_43
+  - Construction Tileset_94
   - Construction Tileset_54
   - Construction Tileset_42
   - Construction Tileset_78
+  - Construction Tileset_95
   - Construction Tileset_55
   - Construction Tileset_41
   - Construction Tileset_79
   - Construction Tileset_25
+  - Construction Tileset_96
   - Construction Tileset_56
   - Construction Tileset_40
   - Construction Tileset_76
   - Construction Tileset_24
+  - Construction Tileset_97
   - Construction Tileset_57
   - Construction Tileset_47
   - Construction Tileset_77
@@ -679,6 +698,7 @@ SpriteAtlas:
   - Construction Tileset_44
   - Construction Tileset_72
   - Construction Tileset_20
+  - Construction Tileset_93
   - Construction Tileset_73
   - Construction Tileset_23
   - Construction Tileset_70
