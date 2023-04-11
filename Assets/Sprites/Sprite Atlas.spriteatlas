@@ -201,6 +201,7 @@ SpriteAtlas:
   - {fileID: -1950035063, guid: d7e0fd8212499ee46b8b3c4d03427e0b, type: 3}
   - {fileID: -1979559554, guid: d7e0fd8212499ee46b8b3c4d03427e0b, type: 3}
   - {fileID: 21300000, guid: 055bc4e2f1303a1459beca212f395709, type: 3}
+  - {fileID: 21300000, guid: 36f62963fbcedd048aa1a48479d0d7ef, type: 3}
   - {fileID: 21300000, guid: d45a71b4410f99b45a6b1092fe6d8eae, type: 3}
   - {fileID: 21300000, guid: 2e928bb49ba791749a38989cfc09ae12, type: 3}
   - {fileID: 21300000, guid: 791809157c6663b48955225da646eeab, type: 3}
@@ -727,6 +728,7 @@ SpriteAtlas:
   - Sand Accesories_10
   - Sand Accesories_11
   - DesertMiddleNew
+  - Fulllevel1
   - ForestBackground
   - DesertBuildings
   - Baija_Floor-2.png
