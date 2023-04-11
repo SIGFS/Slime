@@ -85,6 +85,7 @@ public class MovingPlatformScript : MonoBehaviour
         {
             if (transform.position.y > start.y + (cellY * cellsUp) * transform.localScale.y && !isMovingDown)
             {
+                Debug.Log(transform.localPosition.y);
                 isMovingDown = true;
                 yTime = waitTimeY;
             }
