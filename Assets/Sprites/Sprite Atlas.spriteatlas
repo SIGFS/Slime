@@ -515,6 +515,14 @@ SpriteAtlas:
   - {fileID: -189224955, guid: 7280b3abef75f454f929718fae411c6e, type: 3}
   - {fileID: -2143670097, guid: 7280b3abef75f454f929718fae411c6e, type: 3}
   - {fileID: -564475333, guid: 7280b3abef75f454f929718fae411c6e, type: 3}
+  - {fileID: -1788845668, guid: fa8e611c7d924b642ada057daf24eb92, type: 3}
+  - {fileID: -704948154, guid: fa8e611c7d924b642ada057daf24eb92, type: 3}
+  - {fileID: -524015361, guid: fa8e611c7d924b642ada057daf24eb92, type: 3}
+  - {fileID: 476670642, guid: fa8e611c7d924b642ada057daf24eb92, type: 3}
+  - {fileID: 661071881, guid: fa8e611c7d924b642ada057daf24eb92, type: 3}
+  - {fileID: -2060647882, guid: fa8e611c7d924b642ada057daf24eb92, type: 3}
+  - {fileID: -1030572741, guid: fa8e611c7d924b642ada057daf24eb92, type: 3}
+  - {fileID: 1896670286, guid: fa8e611c7d924b642ada057daf24eb92, type: 3}
   - {fileID: -870183028, guid: 069e708c3e69e0440b13f06495028639, type: 3}
   - {fileID: -1470936218, guid: 069e708c3e69e0440b13f06495028639, type: 3}
   - {fileID: 1362523398, guid: 069e708c3e69e0440b13f06495028639, type: 3}
@@ -1132,6 +1140,14 @@ SpriteAtlas:
   - Scorpion_7
   - Scorpion_6
   - Scorpion_1
+  - Skeleton_3
+  - Skeleton_2
+  - Skeleton_1
+  - Skeleton_0
+  - Skeleton_7
+  - Skeleton_6
+  - Skeleton_5
+  - Skeleton_4
   - Big Rock_12
   - Big Rock_13
   - Big Rock_10
