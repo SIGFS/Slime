@@ -26,6 +26,7 @@ public class WellScript : MonoBehaviour
             delay = 0f;
             liquidRemaining--;
             transform.localScale -= new Vector3(0f, amountToShrink, 0f);
+            transform.localPosition -= new Vector3(0f, 0.3f, 0f);
             SizeScript.instance.SizeChangeUp();
         }
     }

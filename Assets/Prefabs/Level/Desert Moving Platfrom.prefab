@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2684719641842088322}
   - component: {fileID: 2684719641842088321}
   m_Layer: 7
-  m_Name: Sand Tileset_4
+  m_Name: Tileset2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 2684719642034274295}
   - component: {fileID: 2684719642034274294}
   m_Layer: 7
-  m_Name: Sand Tileset_10
+  m_Name: Tileset3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -312,7 +312,7 @@ GameObject:
   - component: {fileID: 2684719642656821955}
   - component: {fileID: 2684719642656821954}
   m_Layer: 7
-  m_Name: Sand Tileset_11
+  m_Name: Tileset4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -396,7 +396,7 @@ GameObject:
   - component: {fileID: 2684719642870324524}
   - component: {fileID: 2684719642870324515}
   m_Layer: 7
-  m_Name: Sand Tileset_9
+  m_Name: Tileset1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

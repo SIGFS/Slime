@@ -65,7 +65,7 @@ public class SizeScript : MonoBehaviour
         }
         if (collision.gameObject.tag == "DeathZone")
         {
-            RestartCheckpoint();
+            Invoke(nameof(RestartCheckpoint), 2f);
         }
     }
     #endregion
@@ -107,7 +107,7 @@ public class SizeScript : MonoBehaviour
             this.gameObject.transform.parent.gameObject.SetActive(false);
 
             // For now, restart the scene. We need to add checkpoints later... 
-            Invoke("RestartCheckpoint", 2f);
+            Invoke(nameof(RestartCheckpoint), 2f);
         }
     }
     #endregion
@@ -199,7 +199,7 @@ public class SizeScript : MonoBehaviour
 
         rightWallCheck.transform.position = new Vector3(circleCollider.bounds.max.x, player.transform.position.y, 0f);
         leftWallCheck.transform.position = new Vector3(circleCollider.bounds.min.x, player.transform.position.y, 0f);
-        floorCheck.transform.position = new Vector3(player.transform.position.x, circleCollider.bounds.min.y - (circleCollider.bounds.min.y / 150f), 0f);
+        floorCheck.transform.position = new Vector3(player.transform.position.x, circleCollider.bounds.min.y, 0f);
     }
 
     #endregion

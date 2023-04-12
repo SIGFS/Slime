@@ -66,6 +66,11 @@ public class SlimeBallScript : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+        if(collision.gameObject.tag == "Button")
+        {
+            gameObject.SetActive(false);
+            collision.gameObject.GetComponent<ButtonScript>().PressButton();
+        }
     }
     #endregion
 
