@@ -666,6 +666,14 @@ SpriteAtlas:
   - {fileID: 1983002697, guid: 1bec146f383c46849b0c138a4a08cc1b, type: 3}
   - {fileID: -968588403, guid: 1bec146f383c46849b0c138a4a08cc1b, type: 3}
   - {fileID: 470523378, guid: 1bec146f383c46849b0c138a4a08cc1b, type: 3}
+  - {fileID: -1538669431, guid: 9ad7047ffc9af524587039240e2a3b74, type: 3}
+  - {fileID: -1469375048, guid: 9ad7047ffc9af524587039240e2a3b74, type: 3}
+  - {fileID: 882309694, guid: 9ad7047ffc9af524587039240e2a3b74, type: 3}
+  - {fileID: 1632380582, guid: 9ad7047ffc9af524587039240e2a3b74, type: 3}
+  - {fileID: -787044064, guid: 9ad7047ffc9af524587039240e2a3b74, type: 3}
+  - {fileID: 2055688227, guid: 9ad7047ffc9af524587039240e2a3b74, type: 3}
+  - {fileID: -984164670, guid: 9ad7047ffc9af524587039240e2a3b74, type: 3}
+  - {fileID: 94524122, guid: 9ad7047ffc9af524587039240e2a3b74, type: 3}
   - {fileID: 2118319676, guid: 76ce7d7f6d0e5e440abc4b624295f0be, type: 3}
   - {fileID: -1660955108, guid: 76ce7d7f6d0e5e440abc4b624295f0be, type: 3}
   - {fileID: -1564769777, guid: 76ce7d7f6d0e5e440abc4b624295f0be, type: 3}
@@ -1291,6 +1299,14 @@ SpriteAtlas:
   - DennisFluid_44
   - DennisFluid_47
   - DennisFluid_46
+  - Flag_8
+  - Flag_0
+  - Flag_1
+  - Flag_2
+  - Flag_3
+  - Flag_4
+  - Flag_5
+  - Flag_6
   - SnakeSlimed_0
   - SnakeSlimed_1
   - SnakeSlimed_2

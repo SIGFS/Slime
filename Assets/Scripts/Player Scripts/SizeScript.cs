@@ -108,9 +108,8 @@ public class SizeScript : MonoBehaviour
         else if (isMinSize())
         {
             //Play slime explode fx
-            this.gameObject.transform.parent.gameObject.SetActive(false);
-
-            // For now, restart the scene. We need to add checkpoints later... 
+            gameObject.transform.parent.gameObject.SetActive(false);
+            
             Invoke(nameof(RestartCheckpoint), 2f);
         }
     }
@@ -159,7 +158,7 @@ public class SizeScript : MonoBehaviour
 
     #region Data Update
 
-    void UpdateCollider()
+    public void UpdateCollider()
     {
 
         switch (Data.size)
