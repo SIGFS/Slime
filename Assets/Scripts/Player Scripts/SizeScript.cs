@@ -63,8 +63,12 @@ public class SizeScript : MonoBehaviour
         {
             SizeChangeDown();
         }
-        if (collision.gameObject.tag == "DeathZone")
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "DeathZone")
         {
+            gameObject.transform.parent.gameObject.SetActive(false);
             Invoke(nameof(RestartCheckpoint), 2f);
         }
     }

@@ -72,6 +72,14 @@ public class SlimeBallScript : MonoBehaviour
             collision.gameObject.GetComponent<ButtonScript>().PressButton();
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "DeathZone")
+        {
+            gameObject.GetComponent<Rigidbody2D>().velocity.Scale(new Vector2(0f, 0.5f));
+        }
+    }
     #endregion
 
     #region Check Spawning Orientation
