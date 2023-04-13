@@ -37,7 +37,7 @@ public class MovingPlatformScript : MonoBehaviour
         isMovingRight = startRight;
         isMovingDown = startDown;
         start = transform.position;
-        target = null;
+        targets = null;
     }
 
     private void Update()
