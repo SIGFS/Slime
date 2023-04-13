@@ -23,7 +23,7 @@ public class MovingPlatformScript : MonoBehaviour
     private float xTime = 0;
     private float yTime = 0;
     private Vector3 offset;
-    private GameObject target;
+    private List<GameObject> targets;
 
     private void Awake()
     {
@@ -111,18 +111,20 @@ public class MovingPlatformScript : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D col)
     {
-        target = col.gameObject;
-        offset = target.transform.position - transform.position;
+        targets.Add(col.gameObject);
+        offset = targets[0].transform.position - transform.position;
     }
     void OnTriggerExit2D(Collider2D col)
     {
-        target = null;
+        targets.Remove(col.gameObject);
     }
     void LateUpdate()
     {
-        if (target != null)
+        if (targets != null)
         {
-            target.transform.position = transform.position + offset;
+            foreach (GameObject t in targets){
+                t.transform.position = transform.position + offset;
+            }
         }
     }
 }
