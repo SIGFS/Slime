@@ -14,6 +14,7 @@ public class EnemyScript : MonoBehaviour
 
     public Transform groundCheck;
     public Transform wallCheck;
+    public bool startRight;
     public LayerMask ground;
 
     private SpriteRenderer enemySprite;
@@ -25,6 +26,14 @@ public class EnemyScript : MonoBehaviour
     {
         enemySprite = enemy.GetComponent<SpriteRenderer>();
         enemyBox = enemy.GetComponent<Collider2D>();
+    }
+
+    private void Start()
+    {
+        if (startRight)
+        {
+            enemySprite.flipX = true;
+        }
     }
 
     // Update is called once per frame
