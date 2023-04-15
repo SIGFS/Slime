@@ -305,7 +305,9 @@ SpriteAtlas:
   - {fileID: -1736119451, guid: f560e6c288b31594497d5b32d9038951, type: 3}
   - {fileID: 21300000, guid: 055bc4e2f1303a1459beca212f395709, type: 3}
   - {fileID: 21300000, guid: dce1342397291ef4c8d328b22884e049, type: 3}
+  - {fileID: 21300000, guid: 35c7b363d08d7654fbf49c71e3a30cbf, type: 3}
   - {fileID: 21300000, guid: 36f62963fbcedd048aa1a48479d0d7ef, type: 3}
+  - {fileID: 21300000, guid: fc1c0db38cf74034a8c009d0b807df4e, type: 3}
   - {fileID: 1238435594, guid: a59167e368f1a804794d4cafff57e5ad, type: 3}
   - {fileID: -1285641364, guid: a59167e368f1a804794d4cafff57e5ad, type: 3}
   - {fileID: -1863605694, guid: a59167e368f1a804794d4cafff57e5ad, type: 3}
@@ -1273,7 +1275,9 @@ SpriteAtlas:
   - Construction Midground Tileset_1
   - DesertMiddleNew
   - backDuneNew
+  - Level3FullWithBoss
   - Fulllevel1
+  - FullLevel2
   - Forest Trees - Adam_66
   - Forest Trees - Adam_78
   - Forest Trees - Adam_67
