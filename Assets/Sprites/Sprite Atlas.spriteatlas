@@ -725,16 +725,25 @@ SpriteAtlas:
   - {fileID: -12232942, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: -1602824401, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: 1108614230, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
+  - {fileID: -315519945, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: 1770047290, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
+  - {fileID: -1225702716, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: -1151113416, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: -1213630786, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: -424304142, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
+  - {fileID: 1998519078, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: 299701806, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
+  - {fileID: -1233170516, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: -631581927, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
+  - {fileID: 720036344, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: 1242192153, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
+  - {fileID: -812847429, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: 1920506241, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
+  - {fileID: -472574322, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: 1819006332, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
+  - {fileID: -2064287583, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: -783143602, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
+  - {fileID: 38094588, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: 1566239571, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: 967720536, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: -621310091, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
@@ -1885,16 +1894,25 @@ SpriteAtlas:
   - Sand Tileset_67
   - Sand Tileset_64
   - Sand Tileset_65
+  - Sand Tileset_79
   - Sand Tileset_62
+  - Sand Tileset_78
   - Sand Tileset_63
   - Sand Tileset_60
   - Sand Tileset_61
+  - Sand Tileset_71
   - Sand Tileset_70
+  - Sand Tileset_73
   - Sand Tileset_68
+  - Sand Tileset_72
   - Sand Tileset_69
+  - Sand Tileset_75
   - Sand Tileset_19
+  - Sand Tileset_74
   - Sand Tileset_18
+  - Sand Tileset_77
   - Sand Tileset_17
+  - Sand Tileset_76
   - Sand Tileset_16
   - Sand Tileset_15
   - Sand Tileset_14
