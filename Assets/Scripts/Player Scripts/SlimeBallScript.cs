@@ -88,11 +88,13 @@ public class SlimeBallScript : MonoBehaviour
 
                 gameObject.SetActive(false);
             }
+            if(collision.gameObject.tag == "Enemy")
+            {
+                gameObject.SetActive(false);
+            }
         }
-        else
-        {
-            gameObject.SetActive(false);
-        }
+       
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -777,13 +777,17 @@ SpriteAtlas:
   - {fileID: 1907995907, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: -693939401, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: 1633761511, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
+  - {fileID: 503704371, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: -409039842, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: -1128212106, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: -1710997304, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: -1791493113, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
+  - {fileID: 131856636, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: 1398080090, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: 575109300, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
+  - {fileID: 994764767, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: -1331993776, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
+  - {fileID: 458649912, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: -1492417271, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: -2056613979, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
   - {fileID: -112211210, guid: 1d638b695aee2ac4cb5ddca5ebc249e6, type: 3}
@@ -1946,13 +1950,17 @@ SpriteAtlas:
   - Sand Tileset_56
   - Sand Tileset_24
   - Sand Tileset_36
+  - Sand Tileset_80
   - Sand Tileset_49
   - Sand Tileset_55
   - Sand Tileset_25
   - Sand Tileset_31
+  - Sand Tileset_81
   - Sand Tileset_54
   - Sand Tileset_30
+  - Sand Tileset_82
   - Sand Tileset_33
+  - Sand Tileset_83
   - Sand Tileset_28
   - Sand Tileset_32
   - Sand Tileset_59
