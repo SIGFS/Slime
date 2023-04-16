@@ -10,7 +10,6 @@ public class LevelSelectPlayer : MonoBehaviour
 
     //speeds
     [SerializeField] float moveSpeed = 3f;
-    //[SerializeField] float teleportTime = 1f;
 
     //location of sprite
     [SerializeField] Transform playerSprite = null;
@@ -21,15 +20,12 @@ public class LevelSelectPlayer : MonoBehaviour
     MapPoint prevPoint, currentPoint;
 
     //References
-        //Add Animator
 
     SpriteRenderer spriteRenderer;
 
     //Player Movement
     float x, y;
     bool canMove = true;
-    bool animationSet = false;
-    int animating;
     Vector2 movement;
     #endregion
 
@@ -42,7 +38,6 @@ public class LevelSelectPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Add animator
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         spriteRenderer.enabled = false;
         canMove = false;
@@ -57,13 +52,9 @@ public class LevelSelectPlayer : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, currentPoint.transform.position, moveSpeed * Time.deltaTime);
 
-            if(Vector3.Distance(transform.position, currentPoint.transform.position) < 0.1f)
+            if (Vector3.Distance(transform.position, currentPoint.transform.position) < 0.1f)
             {
                 CheckMapPoint();
-            }
-            else
-            {
-                //Set Animation
             }
         }
     }
@@ -78,41 +69,31 @@ public class LevelSelectPlayer : MonoBehaviour
     #region User Methods
     void AutoMove()
     {
-        if(currentPoint.up != null && currentPoint.up != prevPoint)
+        if (currentPoint.up != null && currentPoint.up != prevPoint)
         {
             SetNextPoint(currentPoint.up);
-            animating = 1;
-            animationSet = false;
         }
-        else if(currentPoint.right != null && currentPoint.right != prevPoint)
+        else if (currentPoint.right != null && currentPoint.right != prevPoint)
         {
             SetNextPoint(currentPoint.right);
-            animating = 1;
-            animationSet = false;
         }
-        else if(currentPoint.down != null && currentPoint.down != prevPoint)
+        else if (currentPoint.down != null && currentPoint.down != prevPoint)
         {
             SetNextPoint(currentPoint.down);
-            animating = 1;
-            animationSet = false;
         }
-        else if(currentPoint.left != null && currentPoint.left != prevPoint)
+        else if (currentPoint.left != null && currentPoint.left != prevPoint)
         {
             SetNextPoint(currentPoint.left);
-            animating = 2;
-            animationSet = false;
         }
     }
 
     void CheckInput()
     {
-        if(y > 0.5f)
+        if (y > 0.5f)
         {
-            if(currentPoint.up != null)
+            if (currentPoint.up != null)
             {
                 SetNextPoint(currentPoint.up);
-                animating = 1;
-                animationSet = false;
             }
         }
         if (x > 0.5f)
@@ -120,8 +101,6 @@ public class LevelSelectPlayer : MonoBehaviour
             if (currentPoint.right != null)
             {
                 SetNextPoint(currentPoint.right);
-                animating = 1;
-                animationSet = false;
             }
         }
         if (y < -0.5f)
@@ -129,8 +108,6 @@ public class LevelSelectPlayer : MonoBehaviour
             if (currentPoint.down != null)
             {
                 SetNextPoint(currentPoint.down);
-                animating = 1;
-                animationSet = false;
             }
         }
         if (x < -0.5f)
@@ -138,37 +115,12 @@ public class LevelSelectPlayer : MonoBehaviour
             if (currentPoint.left != null)
             {
                 SetNextPoint(currentPoint.left);
-                animating = 2;
-                animationSet = false;
             }
         }
     }
 
     void CheckMapPoint()
     {
-        if (currentPoint.isWarpPoint && !currentPoint.hasWarped)
-        {
-            if (animating != 0)
-            {
-                animating = 0;
-                SetAnimation();
-            }
-
-            //if Auto warp
-                //Teleport Player
-        }
-
-        if(currentPoint.isCorner && currentPoint.isWarpPoint)
-        {
-            if(animating != 0)
-            {
-                animating = 0;
-                SetAnimation();
-            }
-
-            CheckInput();
-            //Select Level
-        }
 
         if (currentPoint.isCorner)
         {
@@ -176,24 +128,10 @@ public class LevelSelectPlayer : MonoBehaviour
         }
         else
         {
-            if(animating != 0)
-            {
-                animating = 0;
-                SetAnimation();
-            }
-
             CheckInput();
-            //Select Level
+            SelectLevel();
         }
 
-    }
-
-    void SetAnimation()
-    {
-        //Set Animation State using Index
-            //Animating == 0 -> Idle
-            //Animating == 1 -> Walk
-            //Animating == 2 -> Walk Left
     }
 
     void SetNextPoint(MapPoint nextPoint)
@@ -207,19 +145,35 @@ public class LevelSelectPlayer : MonoBehaviour
 
     void SetPlayerPos()
     {
-        //Check Save Data for current level
-        //If player hasn't beaten the first level on launch
-        transform.position = startPoint.transform.position;
+        if (DataManager.instance.gameData.currentLevelName == "")
+        {
+            transform.position = startPoint.transform.position;
 
-        spriteRenderer.enabled = true;
-        currentPoint = startPoint;
-        prevPoint = currentPoint;
+            spriteRenderer.enabled = true;
+            currentPoint = startPoint;
+            prevPoint = currentPoint;
 
-        canMove = true;
+            canMove = true;
+        }
+        else
+        {
+            foreach (MapPoint point in allPoints)
+            {
+                if (point.isLevel)
+                {
+                    if (point.sceneToLoad == DataManager.instance.gameData.currentLevelName)
+                    {
+                        transform.position = point.transform.position;
 
-        //Else
-            //Sort through all map points to find current level
-            //Set player position to that level
+                        spriteRenderer.enabled = true;
+                        currentPoint = point;
+                        prevPoint = currentPoint;
+
+                        canMove = true;
+                    }
+                }
+            }
+        }
     }
 
     public void GetMovement()
@@ -230,25 +184,25 @@ public class LevelSelectPlayer : MonoBehaviour
         y = movement.y;
     }
 
-    //Select Level Method
-        //If click
-            //if level
-                //play start level sound
-                //Set save data
-                //Load level
-            //if warp
-                //teleport player
+    public void SelectLevel()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            if (currentPoint != null)
+            {
+                if (!currentPoint.isLocked && currentPoint.isLevel)
+                {
+                    LevelSelectAudio.instance.Play_StartLevelSound();
 
-    //Teleport Player Method
-        //update variables
-        //for time
-            //Set player opacity to nothing
-        //move player
-        //wait for time
-        //for time
-            //Set player opacity back
-        //update variables
+                    DataManager.instance.gameData.currentLevelName = currentPoint.sceneToLoad;
+                    DataManager.instance.SaveGameData();
 
+                    PlayerPrefs.SetInt("CurrentCheckpoint", 0);
+                    SceneManager.LoadScene(currentPoint.sceneToLoad);
+                }
+            }
+        }
+    }
 
     #endregion
 

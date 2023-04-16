@@ -15,7 +15,7 @@ public class MapPoint : MonoBehaviour
 
     //Scene Options
     [Header("Scene Options")]
-    //[SerializeField] int levelIndex = 0;
+    [SerializeField] int levelIndex = 0;
     [HideInInspector] public string sceneToLoad;
     [TextArea(1, 2)]
     public string levelName;
@@ -68,7 +68,8 @@ public class MapPoint : MonoBehaviour
         {
             if (isLevel)
             {
-                //Data Management
+                sceneToLoad = DataManager.instance.gameData.lockedLevels[levelIndex].sceneToLoad;
+                isLocked = DataManager.instance.gameData.lockedLevels[levelIndex].isLocked;
             }
 
             if (isLocked)

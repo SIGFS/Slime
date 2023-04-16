@@ -5,6 +5,7 @@ using UnityEngine;
 public class WellScript : MonoBehaviour
 {
     public float liquidRemaining;
+    public bool unlimited;
     private float delay, amountToShrink;
     private float delayMax = 1f;
 
@@ -20,14 +21,28 @@ public class WellScript : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collider)
     {
-        //checks if the collider colliding with it is attached to the player, if there is enough liquid remaining, if the cooldown is up, and if the player is
-        //not at the max size. If so, increases the player's size
-        if(collider.tag == "Player" && liquidRemaining > 0 && delay >= delayMax && !collider.gameObject.GetComponent<SizeScript>().isMaxSize()) {
-            delay = 0f;
-            liquidRemaining--;
-            transform.localScale -= new Vector3(0f, amountToShrink, 0f);
-            transform.localPosition -= new Vector3(0f, 0.3f, 0f);
-            SizeScript.instance.SizeChangeUp();
+        if (!unlimited)
+        {
+            //checks if the collider colliding with it is attached to the player, if there is enough liquid remaining, if the cooldown is up, and if the player is
+            //not at the max size. If so, increases the player's size
+            if(collider.tag == "Player" && liquidRemaining > 0 && delay >= delayMax && !collider.gameObject.GetComponent<SizeScript>().isMaxSize()) {
+                delay = 0f;
+                liquidRemaining--;
+                transform.localScale -= new Vector3(0f, amountToShrink, 0f);
+                transform.localPosition -= new Vector3(0f, 0.3f, 0f);
+                SizeScript.instance.SizeChangeUp();
+            }
         }
+        if (unlimited)
+        {
+            //checks if the collider colliding with it is attached to the player, if there is enough liquid remaining, if the cooldown is up, and if the player is
+            //not at the max size. If so, increases the player's size
+            if (collider.tag == "Player"&& delay >= delayMax && !collider.gameObject.GetComponent<SizeScript>().isMaxSize())
+            {
+                delay = 0f;
+                SizeScript.instance.SizeChangeUp();
+            }
+        }
+        
     }
 }
