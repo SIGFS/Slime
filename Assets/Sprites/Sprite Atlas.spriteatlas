@@ -699,6 +699,15 @@ SpriteAtlas:
   - {fileID: 994528681, guid: 3c21c4c946de38b49a2e865b9e544fe2, type: 3}
   - {fileID: -823197590, guid: 3c21c4c946de38b49a2e865b9e544fe2, type: 3}
   - {fileID: -2005760817, guid: 3c21c4c946de38b49a2e865b9e544fe2, type: 3}
+  - {fileID: -1228736512, guid: e90d750a2dbf9d0478a0aec959ca03c4, type: 3}
+  - {fileID: 1204488825, guid: e90d750a2dbf9d0478a0aec959ca03c4, type: 3}
+  - {fileID: 1745206586, guid: e90d750a2dbf9d0478a0aec959ca03c4, type: 3}
+  - {fileID: 1629354285, guid: e90d750a2dbf9d0478a0aec959ca03c4, type: 3}
+  - {fileID: -1416349952, guid: e90d750a2dbf9d0478a0aec959ca03c4, type: 3}
+  - {fileID: -474893245, guid: e90d750a2dbf9d0478a0aec959ca03c4, type: 3}
+  - {fileID: 78463218, guid: e90d750a2dbf9d0478a0aec959ca03c4, type: 3}
+  - {fileID: -2096676028, guid: e90d750a2dbf9d0478a0aec959ca03c4, type: 3}
+  - {fileID: -1378505911, guid: e90d750a2dbf9d0478a0aec959ca03c4, type: 3}
   - {fileID: 21300000, guid: 3f9a772a8860dfd44b210eaef6f2c6f8, type: 3}
   - {fileID: 661528128, guid: eb1b70ea60ada314ab15d04010415f02, type: 3}
   - {fileID: 1637088059, guid: eb1b70ea60ada314ab15d04010415f02, type: 3}
@@ -1681,6 +1690,15 @@ SpriteAtlas:
   - Attack Point (1)_0
   - Attack Point (1)_1
   - Attack Point (1)_4
+  - Dennis_7
+  - Dennis_6
+  - Dennis_5
+  - Dennis_4
+  - Dennis_3
+  - Dennis_2
+  - Dennis_1
+  - Dennis_0
+  - Dennis_8
   - brown
   - Baja_Slime2_8
   - Baja_Slime2_5
