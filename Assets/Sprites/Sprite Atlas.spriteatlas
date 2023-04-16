@@ -434,6 +434,10 @@ SpriteAtlas:
   - {fileID: 1926578526, guid: 81de26e5849bb6d48bb084d43c6ed830, type: 3}
   - {fileID: 630543555, guid: 81de26e5849bb6d48bb084d43c6ed830, type: 3}
   - {fileID: -964077592, guid: 81de26e5849bb6d48bb084d43c6ed830, type: 3}
+  - {fileID: -1021679585, guid: ea2953f52ee367c4ab7f351ed8c40c68, type: 3}
+  - {fileID: -1899060546, guid: ea2953f52ee367c4ab7f351ed8c40c68, type: 3}
+  - {fileID: -138111720, guid: ea2953f52ee367c4ab7f351ed8c40c68, type: 3}
+  - {fileID: -164653000, guid: ea2953f52ee367c4ab7f351ed8c40c68, type: 3}
   - {fileID: -350299417, guid: 10b808f52c6f3884fa1144944f7174cb, type: 3}
   - {fileID: 1499042269, guid: 10b808f52c6f3884fa1144944f7174cb, type: 3}
   - {fileID: -611329263, guid: 10b808f52c6f3884fa1144944f7174cb, type: 3}
@@ -889,6 +893,14 @@ SpriteAtlas:
   - {fileID: 1012756296, guid: 768a869eb8b09c84090e0da144f2a396, type: 3}
   - {fileID: -775050521, guid: 768a869eb8b09c84090e0da144f2a396, type: 3}
   - {fileID: -713733574, guid: 768a869eb8b09c84090e0da144f2a396, type: 3}
+  - {fileID: 101990577, guid: 4fe9ed0f7a38db5488659f21ee9946c7, type: 3}
+  - {fileID: 1939046632, guid: 4fe9ed0f7a38db5488659f21ee9946c7, type: 3}
+  - {fileID: -338277428, guid: 4fe9ed0f7a38db5488659f21ee9946c7, type: 3}
+  - {fileID: -1939934786, guid: 4fe9ed0f7a38db5488659f21ee9946c7, type: 3}
+  - {fileID: 563755398, guid: 4fe9ed0f7a38db5488659f21ee9946c7, type: 3}
+  - {fileID: 16997697, guid: 4fe9ed0f7a38db5488659f21ee9946c7, type: 3}
+  - {fileID: -808719100, guid: 4fe9ed0f7a38db5488659f21ee9946c7, type: 3}
+  - {fileID: 531336646, guid: 4fe9ed0f7a38db5488659f21ee9946c7, type: 3}
   - {fileID: -1623759054, guid: c242c12fccb817e4486ffb602a3bda0f, type: 3}
   - {fileID: -1420710164, guid: c242c12fccb817e4486ffb602a3bda0f, type: 3}
   - {fileID: -410080460, guid: c242c12fccb817e4486ffb602a3bda0f, type: 3}
@@ -1404,6 +1416,10 @@ SpriteAtlas:
   - Bat2 1_7
   - Bat2 1_4
   - Bat2 1_5
+  - Wasp_3
+  - Wasp_2
+  - Wasp_1
+  - Wasp_0
   - Bat2Slime_3
   - Bat2Slime_2
   - Bat2Slime_1
@@ -1859,6 +1875,14 @@ SpriteAtlas:
   - Level Select_20
   - Level Select_72
   - Level Select_21
+  - Spider_1
+  - Spider_0
+  - Spider_3
+  - Spider_2
+  - Spider_5
+  - Spider_4
+  - Spider_7
+  - Spider_6
   - Construction Accessories_9
   - Construction Accessories_8
   - Construction Accessories_3

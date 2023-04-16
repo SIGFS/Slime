@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fa8e611c7d924b642ada057daf24eb92
+guid: ea2953f52ee367c4ab7f351ed8c40c68
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Skeleton_0
+      name: Wasp_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 160
+        y: 76
         width: 64
-        height: 160
+        height: 76
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 501477f0f5cae7d46932f9ca2ef5a4eb
-      internalID: 476670642
+      spriteID: f266d994f7f2242458ed6037de238566
+      internalID: -164653000
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton_1
+      name: Wasp_1
       rect:
         serializedVersion: 2
         x: 64
-        y: 160
+        y: 76
         width: 64
-        height: 160
+        height: 76
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,62 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e70eb191738b9824c9b06a522744d3ee
-      internalID: -524015361
+      spriteID: 22b1fa691eb79514c9e6a6f2f3f51ad8
+      internalID: -138111720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 160
-        width: 64
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 06ff1deb855d9d9469f67daf03f99cbc
-      internalID: -704948154
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton_3
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 160
-        width: 64
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 398a797a71129fc40823fce4cff589d7
-      internalID: -1788845668
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton_4
+      name: Wasp_2
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 64
-        height: 160
+        height: 76
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08ec224ab4469ac4a84e8501f4d21be7
-      internalID: 1896670286
+      spriteID: ca0c42ed4dc68c540a9fd3946774915d
+      internalID: -1899060546
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton_5
+      name: Wasp_3
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 64
-        height: 160
+        height: 76
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,50 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c13e7ae4e355eb34da59cfc50618b31a
-      internalID: -1030572741
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton_6
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 64
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f2c4531629de62e4d993472161333a55
-      internalID: -2060647882
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton_7
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 64
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1b2ab881a29b9f14b90ac52b9b037c5a
-      internalID: 661071881
+      spriteID: bc12577765b0a26499ded64333166018
+      internalID: -1021679585
       vertices: []
       indices: 
       edges: []
@@ -283,14 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Skeleton_0: 476670642
-      Skeleton_2: -704948154
-      Skeleton_5: -1030572741
-      Skeleton_3: -1788845668
-      Skeleton_7: 661071881
-      Skeleton_6: -2060647882
-      Skeleton_4: 1896670286
-      Skeleton_1: -524015361
+      Wasp_2: -1899060546
+      Wasp_1: -138111720
+      Wasp_0: -164653000
+      Wasp_3: -1021679585
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
