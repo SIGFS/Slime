@@ -72,6 +72,7 @@ public class AttackPointScript : MonoBehaviour
     {
         if (!SizeScript.instance.isMinSize())
         {
+            AudioManager.Instance.playSlimeShot();
             GameObject BallIns = Instantiate(slimeBullet, transform.position, Quaternion.identity);
             BallIns.GetComponent<Rigidbody2D>().velocity = dir * force;
 

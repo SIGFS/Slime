@@ -244,6 +244,7 @@ public class PlayerMovement : MonoBehaviour
 	#region Jump Methods
 	private void Jump()
 	{
+		AudioManager.Instance.playSlimeJumpLand();
 		//Ensures we can't call Jump multiple times from one press
 		LastPressedJumpTime = 0;
 		LastOnGroundTime = 0;
@@ -262,12 +263,14 @@ public class PlayerMovement : MonoBehaviour
 
 	public void BouncePad(float bounceForce)
     {
+		AudioManager.Instance.playSlimeBounce();
 		playerAnim.SetBool("Jumping", true);
 		RB.AddForce(Vector2.up * bounceForce, ForceMode2D.Impulse);
 	}
 
 	public void BounceEnemy(float bounceForce)
     {
+		AudioManager.Instance.playSlimeBounce();
 		playerAnim.SetBool("Jumping", true);
 		RB.AddForce(Vector2.up * bounceForce, ForceMode2D.Impulse);
 	}
