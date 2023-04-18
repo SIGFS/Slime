@@ -23,6 +23,7 @@ public class EnemyCollision : MonoBehaviour
     {
         Transform colPosition = collision.gameObject.GetComponent<Transform>();
         Rigidbody2D colBody = collision.gameObject.GetComponent<Rigidbody2D>();
+        Collider2D colCollider = collision.gameObject.GetComponent<Collider2D>();
 
         if (collision.gameObject.tag == "Player")
         {
@@ -31,7 +32,9 @@ public class EnemyCollision : MonoBehaviour
 
             SizeScript playerSize = collision.gameObject.GetComponent<SizeScript>();
             //Check if player is above enemy, thrust upward
-            if (colPosition.position.y > transform.position.y /*&& colPosition.position.x > transform.position.x - myCollider.bounds.extents.x && colPosition.position.x < transform.position.x + myCollider.bounds.extents.x*/)
+            if (colPosition.position.y > transform.position.y && 
+                colPosition.position.x > myCollider.bounds.min.x - (colCollider.bounds.size.x * 0.75f) && 
+                colPosition.position.x < myCollider.bounds.max.x + (colCollider.bounds.size.x * 0.75f))
             {
                 if (isSlimed)
                     force *= 1.5f;

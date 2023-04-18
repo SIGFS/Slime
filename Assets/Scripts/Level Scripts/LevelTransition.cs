@@ -30,10 +30,11 @@ public class LevelTransition : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
+            player = collision.gameObject;
 
             if (GameManager._currentState == GameManager.GameState.Entering)
             {
-                if(isEnter)
+                if (isEnter)
                     StartCoroutine(FadeFromWhite());
 
                 if(barrier != null && !isExit)
@@ -46,12 +47,9 @@ public class LevelTransition : MonoBehaviour
             }
             else if (GameManager._currentState == GameManager.GameState.Level && isExit)
             {
-                player = collision.gameObject;
                 player.GetComponent<PlayerMovement>().enabled = false;
 
-                size = player.GetComponent<SizeScript>().getSize();
-                player.GetComponent<Animator>().Play("Idle" + size);
-
+                StartCoroutine(DisableAnimate());
 
                 StartCoroutine(FadeToWhite());
 
@@ -59,6 +57,14 @@ public class LevelTransition : MonoBehaviour
             }
 
         }
+    }
+
+    IEnumerator DisableAnimate()
+    {
+        size = player.GetComponent<SizeScript>().getSize();
+        player.GetComponent<Animator>().Play("Idle" + size);
+        yield return new WaitForEndOfFrame();
+        player.GetComponent<Animator>().enabled = false;
     }
 
     IEnumerator FadeToWhite()
@@ -71,10 +77,11 @@ public class LevelTransition : MonoBehaviour
             alphaValue += .01f;
             tmp.a = alphaValue;
             whiteS.color = tmp;
-            yield return new WaitForSeconds(.03f);
+            yield return new WaitForSeconds(.02f);
         }
         if (alphaValue >= 1)
         {
+            player.GetComponent<Animator>().enabled = true;
             //Return to overworld
             GameManager.instance.LevelWin();
         }
@@ -90,7 +97,7 @@ public class LevelTransition : MonoBehaviour
             alphaValue -= .01f;
             tmp.a = alphaValue;
             whiteS.color = tmp;
-            yield return new WaitForSeconds(.03f);
+            yield return new WaitForSeconds(.02f);
         }
     }
 }
