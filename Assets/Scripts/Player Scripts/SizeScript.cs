@@ -69,6 +69,7 @@ public class SizeScript : MonoBehaviour
         if (collision.tag == "DeathZone")
         {
             gameObject.transform.parent.gameObject.SetActive(false);
+            AudioManager.Instance.playDeath();
             Invoke(nameof(RestartCheckpoint), 2f);
         }
     }
@@ -110,7 +111,7 @@ public class SizeScript : MonoBehaviour
         else if (isMinSize())
         {
             //Play slime explode fx
-            //AudioManager.Instance.playSlimeShot();
+            AudioManager.Instance.playDeath();
             gameObject.transform.parent.gameObject.SetActive(false);
             
             Invoke(nameof(RestartCheckpoint), 2f);

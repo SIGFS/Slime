@@ -324,7 +324,7 @@ public class PlayerMovement : MonoBehaviour
 	IEnumerator PlayMoveSound()
     {
 		AudioManager.Instance.playMovement();
-		yield return new WaitForSeconds(.5f);
+		yield return new WaitForSeconds(0.4f);
 		isMoving = false;
 	}
 }

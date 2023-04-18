@@ -60,11 +60,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3b91a200fde6c7b47879091b8e01446b, type: 3}
   - {fileID: 8300000, guid: 5c229d07c9502124dbe488818cca0317, type: 3}
   SlimeMovement:
-  - {fileID: 8300000, guid: 393fb383174381d4394ad9436a3badc5, type: 3}
-  - {fileID: 8300000, guid: a5cffd2814a6faa4981eeb261345366b, type: 3}
-  - {fileID: 8300000, guid: 624dddbed71b6a64c94b01e8abbced7d, type: 3}
-  - {fileID: 8300000, guid: ee0ecf6b95882d744b3d501e03b1eb46, type: 3}
-  - {fileID: 8300000, guid: 1c6ac0382bdbca446b7662177c953d52, type: 3}
+  - {fileID: 8300000, guid: 10e8bc3beb3f6124aa9334fbc9962473, type: 3}
+  - {fileID: 8300000, guid: f811683a05f80f546a76cfcb59bf23a2, type: 3}
+  - {fileID: 8300000, guid: d2c4408bfc01aee478e2d80bf2b95c63, type: 3}
+  - {fileID: 8300000, guid: a4adc21215fb8c44b9c28b0d042fc935, type: 3}
+  - {fileID: 8300000, guid: e7a1ae9b3fa91994dbadd2fa67125a30, type: 3}
   SlimeBounce:
   - {fileID: 8300000, guid: eb7da49b731ac424cb599f45d0025b91, type: 3}
   - {fileID: 8300000, guid: 97b2212f12a0d4443a547e7a5920dbad, type: 3}
@@ -72,6 +72,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 56a2f1707bd979d4ab46ad11e1201887, type: 3}
   - {fileID: 8300000, guid: e4354c4a9043ff1439cf5bf2c1de9c17, type: 3}
   SlimeShot: {fileID: 8300000, guid: 0854aa4d932b2f14db33526fc6c446aa, type: 3}
+  Death: {fileID: 8300000, guid: ee0ecf6b95882d744b3d501e03b1eb46, type: 3}
 --- !u!1 &6252985267257221585
 GameObject:
   m_ObjectHideFlags: 0

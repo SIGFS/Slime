@@ -13,6 +13,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip[] SlimeBounce;
     [SerializeField] private AudioClip[] SlimeGrow;
     [SerializeField] private AudioClip SlimeShot;
+    [SerializeField] private AudioClip Death;
 
     private void Awake()
     {
@@ -66,5 +67,9 @@ public class AudioManager : MonoBehaviour
     public void playSlimeShot()
     {
         playsound(SlimeShot);
+    }
+    public void playDeath()
+    {
+        playsound(Death);
     }
 }
