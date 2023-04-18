@@ -374,6 +374,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 35c7b363d08d7654fbf49c71e3a30cbf, type: 3}
   - {fileID: 21300000, guid: 36f62963fbcedd048aa1a48479d0d7ef, type: 3}
   - {fileID: 21300000, guid: fc1c0db38cf74034a8c009d0b807df4e, type: 3}
+  - {fileID: 21300000, guid: f8f559d369f8b8a459d5b1dad8aeb8cc, type: 3}
   - {fileID: 1238435594, guid: a59167e368f1a804794d4cafff57e5ad, type: 3}
   - {fileID: -1285641364, guid: a59167e368f1a804794d4cafff57e5ad, type: 3}
   - {fileID: -1863605694, guid: a59167e368f1a804794d4cafff57e5ad, type: 3}
@@ -490,6 +491,7 @@ SpriteAtlas:
   - {fileID: 1785156441, guid: a59167e368f1a804794d4cafff57e5ad, type: 3}
   - {fileID: 21300000, guid: d45a71b4410f99b45a6b1092fe6d8eae, type: 3}
   - {fileID: 21300000, guid: 2e928bb49ba791749a38989cfc09ae12, type: 3}
+  - {fileID: 21300000, guid: 2312c4150eae9854daf267120ce1aca1, type: 3}
   - {fileID: 21300000, guid: 791809157c6663b48955225da646eeab, type: 3}
   - {fileID: 21300000, guid: b76386555969b054a8bad1c3ad8af01c, type: 3}
   - {fileID: 1777513325, guid: 81de26e5849bb6d48bb084d43c6ed830, type: 3}
@@ -525,6 +527,7 @@ SpriteAtlas:
   - {fileID: 567951495, guid: 49864ec62ada78f4dbeecfe43074bbc8, type: 3}
   - {fileID: 21300000, guid: fc877df67adb3174cac604c78d3bc627, type: 3}
   - {fileID: 21300000, guid: afd9ab07dcfef7b41902f1a417515599, type: 3}
+  - {fileID: 21300000, guid: 9e792527c9f86df4ca6b36ec99a05bd8, type: 3}
   - {fileID: 878267626, guid: 40f9182777654fd4d9eaeb0f4c58b4d5, type: 3}
   - {fileID: -817216726, guid: 40f9182777654fd4d9eaeb0f4c58b4d5, type: 3}
   - {fileID: 21300000, guid: 63fd6e5742ddaf340b783c229ad6092a, type: 3}
@@ -1193,6 +1196,7 @@ SpriteAtlas:
   - {fileID: -1660955108, guid: 76ce7d7f6d0e5e440abc4b624295f0be, type: 3}
   - {fileID: -1564769777, guid: 76ce7d7f6d0e5e440abc4b624295f0be, type: 3}
   - {fileID: 1422995146, guid: 76ce7d7f6d0e5e440abc4b624295f0be, type: 3}
+  - {fileID: 21300000, guid: 1445578fa09c2d2449e603ab85f90474, type: 3}
   - {fileID: 173959633, guid: c9dcf5df22ca29746b1c34f1e4ef2bae, type: 3}
   - {fileID: -512996668, guid: c9dcf5df22ca29746b1c34f1e4ef2bae, type: 3}
   - {fileID: -1009411891, guid: c9dcf5df22ca29746b1c34f1e4ef2bae, type: 3}
@@ -1550,6 +1554,7 @@ SpriteAtlas:
   - Level3FullWithBoss
   - Fulllevel1
   - FullLevel2
+  - BuildingBackgroundCloseBuildings
   - Forest Trees - Adam_66
   - Forest Trees - Adam_78
   - Forest Trees - Adam_67
@@ -1666,6 +1671,7 @@ SpriteAtlas:
   - Forest Trees - Adam_79
   - ForestBackground
   - DesertBuildings
+  - BuildingBackgroundFarBuildings
   - Baija_Floor-2.png
   - ForestMiddlegroundTrees
   - Bat2 1_2
@@ -1701,6 +1707,7 @@ SpriteAtlas:
   - VultureSlimed_0
   - Kaiju Dennis Eye
   - DesertGround
+  - BuildingBackgroundMidBuildings
   - enemy slime_0
   - enemy slime_1
   - Kaiju Dennis Projectile
@@ -2369,6 +2376,7 @@ SpriteAtlas:
   - SnakeSlimed_1
   - SnakeSlimed_2
   - SnakeSlimed_3
+  - BuildingBackgroundBack
   - Forest Checkpoint_23
   - Forest Checkpoint_22
   - Forest Checkpoint_21
