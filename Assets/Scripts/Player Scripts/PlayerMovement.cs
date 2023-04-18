@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
 	//Timers
 	public float LastOnGroundTime { get; private set; }
+	private bool isMoving = false;
 
 	//Jump
 	private bool _isJumpCut;
@@ -66,6 +67,11 @@ public class PlayerMovement : MonoBehaviour
 		_moveInput.y = Input.GetAxisRaw("Vertical");
 
 		if (_moveInput.x != 0)
+			if(isMoving == false)
+            {
+				isMoving = true;
+				StartCoroutine(PlayMoveSound());	
+			}
 			CheckDirectionToFace(_moveInput.x > 0);
 
 		if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.J))
@@ -314,4 +320,11 @@ public class PlayerMovement : MonoBehaviour
 		Gizmos.DrawWireCube(_backWallCheckPoint.position, _wallCheckSize);
 	}
 	#endregion
+
+	IEnumerator PlayMoveSound()
+    {
+		AudioManager.Instance.playMovement();
+		yield return new WaitForSeconds(.5f);
+		isMoving = false;
+	}
 }

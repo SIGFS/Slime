@@ -87,6 +87,7 @@ public class SizeScript : MonoBehaviour
 
             //Adjust position up to account for the change in size of object to prevent clipping through objects. Adjustment should be half of the size increase increment.
             transform.position += new Vector3(0f, 0.15f, 0f);
+            AudioManager.Instance.playGrow();
         }
 
     }
@@ -103,11 +104,13 @@ public class SizeScript : MonoBehaviour
 
             //Adjust position down to put player back on floor. Adjustment should be half of the size decrease increment.
             transform.position -= new Vector3(0f, 0.15f, 0f);
+            AudioManager.Instance.playGrow();
 
         }
         else if (isMinSize())
         {
             //Play slime explode fx
+            //AudioManager.Instance.playSlimeShot();
             gameObject.transform.parent.gameObject.SetActive(false);
             
             Invoke(nameof(RestartCheckpoint), 2f);
