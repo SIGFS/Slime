@@ -57,20 +57,20 @@ public class SlimeBallScript : MonoBehaviour
                 {
                     case 0/*Down*/:
                         {
-                            position = new Vector3(cellPosition.x, cellPosition.y + 0.16f, 0f);
+                            position = new Vector3(cellPosition.x, cellPosition.y + 0.32f, 0f);
                             Debug.Log("Spawn Down");
                             break;
                         }
                     case 1/*Right*/:
                         {
-                            position = new Vector3(cellPosition.x + 0.16f, cellPosition.y, 0f);
+                            position = new Vector3(cellPosition.x + 0.32f, cellPosition.y, 0f);
                             Debug.Log("Spawn Right");
                             rotation = new Vector3(0f, 0f, 90f);
                             break;
                         }
                     case 2/*Left*/:
                         {
-                            position = new Vector3(cellPosition.x - 0.16f, cellPosition.y, 0f);
+                            position = new Vector3(cellPosition.x + 0.32f, cellPosition.y, 0f);
                             rotation = new Vector3(0f, 0f, -90f);
                             Debug.Log("Spawn Left");
                             break;
@@ -83,7 +83,12 @@ public class SlimeBallScript : MonoBehaviour
 
                     //If collision is with a moving platform, set bouncepad as a child
                     if (collision.gameObject.tag == "Moving Platform")
+                    {
                         newBouncePad.transform.parent = collision.transform;
+                        newBouncePad.transform.position = new Vector3(position.x, position.y + 0.32f, 0f);
+                        newBouncePad.transform.rotation = new Quaternion(0f,0f,0f,0f);
+                    }
+                        
                 }
 
                 gameObject.SetActive(false);

@@ -32,8 +32,9 @@ public class SceneLoader : MonoBehaviour
                 DataManager.instance.SaveGameData();
             }
         }
-        
+
         // Load back to the level select scene
+        GameManager._currentState = GameManager.GameState.Level_Select;
         SceneManager.LoadScene("LevelSelect");
     }
     #endregion

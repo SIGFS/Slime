@@ -54,6 +54,7 @@ MonoBehaviour:
   rightGate: {fileID: 4726526485169050047}
   groundCheck: {fileID: 0}
   wallCheck: {fileID: 0}
+  startRight: 0
   ground:
     serializedVersion: 2
     m_Bits: 0
@@ -195,7 +196,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 9
+  m_SortingOrder: 14
   m_Sprite: {fileID: -1441069428, guid: f8ca7e0b69af6c64a8d954faef668628, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

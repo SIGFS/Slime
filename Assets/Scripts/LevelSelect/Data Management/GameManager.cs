@@ -6,6 +6,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    public enum GameState { Level_Select, Entering, Level, Leaving }
+    public static GameState _currentState;
+
     public bool levelRunning;
     public bool levelWon;
 
@@ -22,10 +25,10 @@ public class GameManager : MonoBehaviour
         levelRunning = true;
         levelWon = false;
     }
-
     public void LevelWin()
     {
         levelWon = true;
         levelRunning = false;
     }
+
 }

@@ -847,6 +847,9 @@ SpriteAtlas:
   - {fileID: -189224955, guid: 7280b3abef75f454f929718fae411c6e, type: 3}
   - {fileID: -2143670097, guid: 7280b3abef75f454f929718fae411c6e, type: 3}
   - {fileID: -564475333, guid: 7280b3abef75f454f929718fae411c6e, type: 3}
+  - {fileID: -682920097, guid: aca18c0c3b4d6e94c8c1d004d87d3309, type: 3}
+  - {fileID: 568157467, guid: aca18c0c3b4d6e94c8c1d004d87d3309, type: 3}
+  - {fileID: -795298398, guid: aca18c0c3b4d6e94c8c1d004d87d3309, type: 3}
   - {fileID: -1788845668, guid: fa8e611c7d924b642ada057daf24eb92, type: 3}
   - {fileID: -704948154, guid: fa8e611c7d924b642ada057daf24eb92, type: 3}
   - {fileID: -524015361, guid: fa8e611c7d924b642ada057daf24eb92, type: 3}
@@ -2020,6 +2023,9 @@ SpriteAtlas:
   - Scorpion_7
   - Scorpion_6
   - Scorpion_1
+  - Finish Flag_1
+  - Finish Flag_0
+  - Finish Flag_2
   - Skeleton_3
   - Skeleton_2
   - Skeleton_1

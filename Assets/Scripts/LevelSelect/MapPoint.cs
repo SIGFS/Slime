@@ -41,6 +41,8 @@ public class MapPoint : MonoBehaviour
     //Level UI Objects
     [Header("Level UI Objects")]
     [SerializeField] TextMeshProUGUI levelText = null;
+    [SerializeField] Image panelImage = null;
+    [SerializeField] Sprite levelBackground = null;
     [SerializeField] GameObject levelPanel = null;
 
     SpriteRenderer spriteRenderer;
@@ -94,6 +96,9 @@ public class MapPoint : MonoBehaviour
                 if (levelPanel != null)
                     levelPanel.SetActive(true);
 
+                if (panelImage != null && levelBackground != null)
+                    panelImage.sprite = levelBackground;
+
                 if (levelText != null)
                     levelText.text = "Level locked";
             }
@@ -101,6 +106,9 @@ public class MapPoint : MonoBehaviour
             {
                 if (levelPanel != null)
                     levelPanel.SetActive(true);
+
+                if (panelImage != null && levelBackground != null)
+                    panelImage.sprite = levelBackground;
 
                 if (levelText != null)
                     levelText.text = levelName;

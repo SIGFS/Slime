@@ -159,6 +159,14 @@ public class PlayerMovement : MonoBehaviour
 	{
 		Run(1);
 	}
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "BossFight")
+        {
+			GameObject.FindGameObjectWithTag("Dennis").GetComponent<DennisScript>().EnterBossFight();
+        }
+    }
     #endregion
 
     #region Input Callbacks

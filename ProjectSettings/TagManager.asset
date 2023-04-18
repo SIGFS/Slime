@@ -17,6 +17,7 @@ TagManager:
   - Button
   - Dennis
   - Object
+  - BossFight
   layers:
   - Default
   - TransparentFX
