@@ -898,6 +898,7 @@ SpriteAtlas:
   - {fileID: -1104885475, guid: 069e708c3e69e0440b13f06495028639, type: 3}
   - {fileID: 21300000, guid: 83136f0d6f47cfb4f8522e68666fa03c, type: 3}
   - {fileID: 21300000, guid: 72b94f4df16f0f3409e2efc37c7892df, type: 3}
+  - {fileID: 21300000, guid: e62e1f9d9f345ed4eb8ec83e6e6498a8, type: 3}
   - {fileID: 21300000, guid: 1211c2cd882fd4f4ba37a60d33eeeea0, type: 3}
   - {fileID: 21300000, guid: dfe9e7cd9b43ff043b44649f9fd03881, type: 3}
   - {fileID: -317644691, guid: bcf07cfd05bb4d842a038ff26b06d309, type: 3}
@@ -2078,6 +2079,7 @@ SpriteAtlas:
   - Big Rock_8
   - FrontDuneNew
   - Kaiju Dennis
+  - Dennis Logo
   - ForestForegroundTrees
   - DesertBackDunes
   - Forest Rocks_Bush- Adam_scaled_3x_pngcrushed_9
