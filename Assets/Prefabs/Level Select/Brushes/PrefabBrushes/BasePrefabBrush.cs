@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor.Tilemaps;
 
 namespace UnityEditor.Tilemaps
 { 
