@@ -530,6 +530,10 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 9e792527c9f86df4ca6b36ec99a05bd8, type: 3}
   - {fileID: 878267626, guid: 40f9182777654fd4d9eaeb0f4c58b4d5, type: 3}
   - {fileID: -817216726, guid: 40f9182777654fd4d9eaeb0f4c58b4d5, type: 3}
+  - {fileID: -1815730902, guid: 3fddb547ca991bb4db29f6bd2918c8b5, type: 3}
+  - {fileID: -946776426, guid: 3fddb547ca991bb4db29f6bd2918c8b5, type: 3}
+  - {fileID: -1909425603, guid: 3fddb547ca991bb4db29f6bd2918c8b5, type: 3}
+  - {fileID: -1069964892, guid: 3fddb547ca991bb4db29f6bd2918c8b5, type: 3}
   - {fileID: 21300000, guid: 63fd6e5742ddaf340b783c229ad6092a, type: 3}
   - {fileID: 1218119320, guid: 88c6da87b8fc75d44aa81d7bf2be241b, type: 3}
   - {fileID: -577976481, guid: 88c6da87b8fc75d44aa81d7bf2be241b, type: 3}
@@ -1711,6 +1715,10 @@ SpriteAtlas:
   - BuildingBackgroundMidBuildings
   - enemy slime_0
   - enemy slime_1
+  - Forest Decorations 2_scaled_3x_pngcrushed_1
+  - Forest Decorations 2_scaled_3x_pngcrushed_0
+  - Forest Decorations 2_scaled_3x_pngcrushed_3
+  - Forest Decorations 2_scaled_3x_pngcrushed_2
   - Kaiju Dennis Projectile
   - Soda Fountain_38
   - Soda Fountain_39
