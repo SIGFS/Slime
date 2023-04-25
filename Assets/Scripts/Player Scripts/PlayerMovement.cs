@@ -63,8 +63,17 @@ public class PlayerMovement : MonoBehaviour
 		#endregion
 
 		#region INPUT HANDLER
-		_moveInput.x = Input.GetAxisRaw("Horizontal");
-		_moveInput.y = Input.GetAxisRaw("Vertical");
+		if (!GameManager.instance.isPaused)
+		{
+			_moveInput.x = Input.GetAxisRaw("Horizontal");
+			_moveInput.y = Input.GetAxisRaw("Vertical");
+        }
+        else
+        {
+			_moveInput.x = 0f;
+			_moveInput.y = 0f;
+		}
+
 
 		if (_moveInput.x != 0)
 			if(isMoving == false)
@@ -74,13 +83,13 @@ public class PlayerMovement : MonoBehaviour
 			}
 			CheckDirectionToFace(_moveInput.x > 0);
 
-		if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.J))
+		if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.J) && !GameManager.instance.isPaused)
 		{
 			OnJumpInput();
 		}
 
 		
-		if (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.C) || Input.GetKeyUp(KeyCode.J))
+		if (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.C) || Input.GetKeyUp(KeyCode.J) && !GameManager.instance.isPaused)
 		{
 			OnJumpUpInput();
 		}

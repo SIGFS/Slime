@@ -40,23 +40,26 @@ public class AttackPointScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //direction calculation
-        Vector2 CurPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 SlimePos = transform.position;
-        Vector2 dir = CurPos - SlimePos;
-
-        PointAtCursor(dir);
-        if (Vector3.Distance(transform.position, centerPos.position) > distance)
+        if (!GameManager.instance.isPaused)
         {
-            distance = Player.GetComponent<CircleCollider2D>().bounds.extents.x * 0.5f;
-            Vector3 directon = (transform.position - centerPos.position).normalized * distance;
-            transform.position = centerPos.position + directon;
-        }
+            //direction calculation
+            Vector2 CurPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 SlimePos = transform.position;
+            Vector2 dir = CurPos - SlimePos;
 
-        //firing
-        if (Input.GetMouseButtonDown(0))
-        {
-            Shoot(dir);
+            PointAtCursor(dir);
+            if (Vector3.Distance(transform.position, centerPos.position) > distance)
+            {
+                distance = Player.GetComponent<CircleCollider2D>().bounds.extents.x * 0.5f;
+                Vector3 directon = (transform.position - centerPos.position).normalized * distance;
+                transform.position = centerPos.position + directon;
+            }
+
+            //firing
+            if (Input.GetMouseButtonDown(0))
+            {
+                Shoot(dir);
+            }
         }
     }
     #endregion
