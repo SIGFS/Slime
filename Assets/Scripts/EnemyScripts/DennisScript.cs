@@ -52,6 +52,14 @@ public class DennisScript : MonoBehaviour
             transform.position = centerPos.position + directon;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "DeathZone") 
+        {
+            inBossFight = false;
+        }
+    }
     #endregion
 
     #region User Methods
@@ -63,17 +71,14 @@ public class DennisScript : MonoBehaviour
 
     void Shoot(Vector2 dir)
     {
-        if (!SizeScript.instance.isMinSize())
-        {
-            GameObject BallIns = Instantiate(slimeBullet, transform.position, Quaternion.identity);
-            BallIns.GetComponent<Rigidbody2D>().velocity = dir * force;
-
-        }
+        GameObject BallIns = Instantiate(slimeBullet, transform.position, Quaternion.identity);
+        BallIns.GetComponent<Rigidbody2D>().velocity = dir * force;
     }
 
     public void EnterBossFight()
     {
         inBossFight = true;
+        StartCoroutine(BossFight());
     }
     #endregion
 

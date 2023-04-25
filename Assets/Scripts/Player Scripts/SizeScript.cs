@@ -13,6 +13,7 @@ public class SizeScript : MonoBehaviour
     [Header("Position Initialization")]
     [SerializeField] private GameObject attackPoint;
     [SerializeField] private GameObject leftWallCheck, rightWallCheck, floorCheck;
+    [SerializeField] private GameObject dennis;
 
     private Animator playerAnim, attackPointAnim;
     private CircleCollider2D circleCollider;
@@ -71,6 +72,10 @@ public class SizeScript : MonoBehaviour
             gameObject.transform.parent.gameObject.SetActive(false);
             AudioManager.Instance.playDeath();
             Invoke(nameof(RestartCheckpoint), 2f);
+        }
+        if (collision.tag == "BossFight") 
+        {
+            dennis.GetComponent<DennisScript>().EnterBossFight();
         }
     }
     #endregion

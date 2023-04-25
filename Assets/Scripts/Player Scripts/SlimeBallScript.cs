@@ -97,8 +97,13 @@ public class SlimeBallScript : MonoBehaviour
                 gameObject.SetActive(false);
             }
         }
-       
-
+       else 
+       {
+            if (!(collision.gameObject.tag == "Dennis")) 
+            {
+                gameObject.SetActive(false);
+            }
+       }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
