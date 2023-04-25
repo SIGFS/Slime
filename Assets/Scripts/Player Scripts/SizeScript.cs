@@ -172,35 +172,35 @@ public class SizeScript : MonoBehaviour
                 circleCollider.offset = size1Offset;
 
                 playerRB.mass = .9f;
-                player.GetComponent<PlayerMovement>()._groundCheckSize = new Vector2(0.6f, 0.03f);
+                player.GetComponent<PlayerMovement>()._groundCheckSize = new Vector2(0.55f, 0.03f);
                 break;
             case 2:
                 circleCollider.radius = size2Radius;
                 circleCollider.offset = size2Offset;
 
                 playerRB.mass = 1f;
-                player.GetComponent<PlayerMovement>()._groundCheckSize = new Vector2(1.05f, 0.03f);
+                player.GetComponent<PlayerMovement>()._groundCheckSize = new Vector2(1f, 0.03f);
                 break;
             case 3:
                 circleCollider.radius = size3Radius;
                 circleCollider.offset = size3Offset;
 
                 playerRB.mass = 1.15f;
-                player.GetComponent<PlayerMovement>()._groundCheckSize = new Vector2(1.54f, 0.03f);
+                player.GetComponent<PlayerMovement>()._groundCheckSize = new Vector2(1.5f, 0.03f);
                 break;
             case 4:
                 circleCollider.radius = size4Radius;
                 circleCollider.offset = size4Offset;
 
                 playerRB.mass = 1.3f;
-                player.GetComponent<PlayerMovement>()._groundCheckSize = new Vector2(2f, 0.03f);
+                player.GetComponent<PlayerMovement>()._groundCheckSize = new Vector2(1.9f, 0.03f);
                 break;
             case 5:
                 circleCollider.radius = size5Radius;
                 circleCollider.offset = size5Offset;
 
                 playerRB.mass = 1.75f;
-                player.GetComponent<PlayerMovement>()._groundCheckSize = new Vector2(2.5f, 0.03f);
+                player.GetComponent<PlayerMovement>()._groundCheckSize = new Vector2(2.2f, 0.03f);
                 break;
         }
 
