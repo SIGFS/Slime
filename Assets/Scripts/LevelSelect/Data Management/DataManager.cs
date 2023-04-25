@@ -37,7 +37,6 @@ public class DataManager : MonoBehaviour
     {
         // Set the folder and file names
         defaultPath = Application.persistentDataPath + "/" + folderName;
-        Debug.Log(Application.persistentDataPath.ToString());
         fileName = defaultPath + "/" + saveFileName + ".json";
 
         // Check if the folder exists if not create it

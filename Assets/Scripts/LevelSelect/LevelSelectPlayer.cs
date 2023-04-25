@@ -26,13 +26,11 @@ public class LevelSelectPlayer : MonoBehaviour
     //References
     Animator anim;
 
-    SpriteRenderer spriteRenderer;
+    [SerializeField] SpriteRenderer spriteRenderer;
 
     //Player Movement
     float x, y;
     bool canMove = true;
-    bool animationSet = false;
-    int animating;
     Vector2 movement;
     #endregion
 
@@ -45,8 +43,6 @@ public class LevelSelectPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponentInChildren<Animator>();
-        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         spriteRenderer.enabled = false;
         canMove = false;
 
@@ -67,8 +63,7 @@ public class LevelSelectPlayer : MonoBehaviour
             }
             else
             {
-                if (!animationSet)
-                    SetAnimation();
+
             }
         }
     }
@@ -86,26 +81,18 @@ public class LevelSelectPlayer : MonoBehaviour
         if (currentPoint.up != null && currentPoint.up != prevPoint)
         {
             SetNextPoint(currentPoint.up);
-            animating = 1;
-            animationSet = false;
         }
         else if (currentPoint.right != null && currentPoint.right != prevPoint)
         {
             SetNextPoint(currentPoint.right);
-            animating = 1;
-            animationSet = false;
         }
         else if (currentPoint.down != null && currentPoint.down != prevPoint)
         {
             SetNextPoint(currentPoint.down);
-            animating = 1;
-            animationSet = false;
         }
         else if (currentPoint.left != null && currentPoint.left != prevPoint)
         {
             SetNextPoint(currentPoint.left);
-            animating = 2;
-            animationSet = false;
         }
     }
 
@@ -116,8 +103,6 @@ public class LevelSelectPlayer : MonoBehaviour
             if (currentPoint.up != null)
             {
                 SetNextPoint(currentPoint.up);
-                animating = 1;
-                animationSet = false;
             }
         }
         if (x > 0.5f)
@@ -125,8 +110,6 @@ public class LevelSelectPlayer : MonoBehaviour
             if (currentPoint.right != null)
             {
                 SetNextPoint(currentPoint.right);
-                animating = 1;
-                animationSet = false;
             }
         }
         if (y < -0.5f)
@@ -134,8 +117,6 @@ public class LevelSelectPlayer : MonoBehaviour
             if (currentPoint.down != null)
             {
                 SetNextPoint(currentPoint.down);
-                animating = 1;
-                animationSet = false;
             }
         }
         if (x < -0.5f)
@@ -143,8 +124,6 @@ public class LevelSelectPlayer : MonoBehaviour
             if (currentPoint.left != null)
             {
                 SetNextPoint(currentPoint.left);
-                animating = 2;
-                animationSet = false;
             }
         }
     }
@@ -153,11 +132,6 @@ public class LevelSelectPlayer : MonoBehaviour
     {
         if (currentPoint.isWarpPoint && !currentPoint.hasWarped)
         {
-            if (animating != 0)
-            {
-                animating = 0;
-                SetAnimation();
-            }
 
             if (currentPoint.autoWarp && !currentPoint.isLocked)
                 StartCoroutine(TeleportPlayer(teleportTime));
@@ -165,11 +139,6 @@ public class LevelSelectPlayer : MonoBehaviour
 
         if (currentPoint.isCorner && currentPoint.isWarpPoint)
         {
-            if (animating != 0)
-            {
-                animating = 0;
-                SetAnimation();
-            }
 
             CheckInput();
             SelectLevel();
@@ -181,34 +150,10 @@ public class LevelSelectPlayer : MonoBehaviour
         }
         else
         {
-            if (animating != 0)
-            {
-                animating = 0;
-                SetAnimation();
-            }
-
             CheckInput();
             SelectLevel();
         }
 
-    }
-
-    void SetAnimation()
-    {
-        animationSet = true;
-
-        switch (animating)
-        {
-            case 0:
-                anim.Play("Idle");
-                break;
-            case 1:
-                anim.Play("Walk");
-                break;
-            case 2:
-                anim.Play("WalkLeft");
-                break;
-        }
     }
 
     void SetNextPoint(MapPoint nextPoint)
@@ -362,7 +307,6 @@ public class LevelSelectPlayer : MonoBehaviour
 
     void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("OnSceneLoad");
         SetPlayerPos();
     }
 

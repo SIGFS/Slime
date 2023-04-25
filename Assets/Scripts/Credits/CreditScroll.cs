@@ -55,7 +55,7 @@ public class CreditScroll : MonoBehaviour
         }
         if(alphaValue >= 1)
         {
-            //SceneManager.LoadScene("TitleScreen");
+            SceneManager.LoadScene("MainMenu");
         }
     }
 
