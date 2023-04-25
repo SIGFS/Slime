@@ -9,6 +9,7 @@ public class LevelTransition : MonoBehaviour
     public GameObject barrier;
     public bool isExit;
     public bool isEnter;
+    public bool isForest;
     
     private GameObject player;
     private int size;
@@ -83,7 +84,15 @@ public class LevelTransition : MonoBehaviour
         {
             player.GetComponent<Animator>().enabled = true;
             //Return to overworld
-            GameManager.instance.LevelWin();
+            if (!isForest)
+            {
+                GameManager.instance.LevelWin();
+            }
+            else
+            {
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Credits");
+            }
+            
         }
     }
     IEnumerator FadeFromWhite()
