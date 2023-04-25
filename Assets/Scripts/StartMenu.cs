@@ -8,6 +8,16 @@ public class StartMenu : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("LevelSelect");
     }
+    public void Controls()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Controls");
+    }
+
+    public void Back()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+    }
+
     public void QuitGame()
     {
         Application.Quit();
