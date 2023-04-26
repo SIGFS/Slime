@@ -35,8 +35,8 @@ public class LevelTransition : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             player = collision.gameObject;
-            music.Stop();
-            levelClear.Play();
+            //music.Stop();
+            //levelClear.Play();
 
             if (GameManager._currentState == GameManager.GameState.Entering)
             {
