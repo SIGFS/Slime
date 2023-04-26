@@ -30,7 +30,7 @@ public class CreditScroll : MonoBehaviour
         
         if (scrollCreds)
         {
-            if (credits.localPosition.y < 2240)
+            if (credits.localPosition.y < 3821)
             {
                 credits.localPosition += Vector3.up * 2;
             }

@@ -14,6 +14,9 @@ public class LevelTransition : MonoBehaviour
     private GameObject player;
     private int size;
 
+    [SerializeField] private AudioSource music;
+    [SerializeField] private AudioSource levelClear;
+
 
 
     private void FixedUpdate()
@@ -32,6 +35,8 @@ public class LevelTransition : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             player = collision.gameObject;
+            music.Stop();
+            levelClear.Play();
 
             if (GameManager._currentState == GameManager.GameState.Entering)
             {
